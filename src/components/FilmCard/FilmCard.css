@@ -1,0 +1,20 @@
+* {
+  margin: 0px;
+  font-size: small;
+}
+
+.film-card {
+  height: 70vh;
+  /* width: 20vw; */
+  margin: 10px;
+}
+
+.movie-poster {
+  height: 50vh;
+  width: 25vw;
+}
+
+.movie-info {
+  height: 10vh;
+  width: 20vw;
+}
