@@ -1,6 +1,7 @@
 .films-container {
-  width: 100vw;
+  width: 90vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
