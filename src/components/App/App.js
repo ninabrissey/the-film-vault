@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='all'>
+    <div className='app'>
       <Nav />
       <MainContent />
       <footer>
