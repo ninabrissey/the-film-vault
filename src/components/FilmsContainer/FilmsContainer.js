@@ -1,6 +1,11 @@
 import FilmCard from '../FilmCard/FilmCard';
-import './FilmContainer.css';
+import './FilmsContainer.css';
 
-const FilmContainer = () => {};
+const FilmsContainer = (props) => {
+  const movieCards = props.movies.map((movie) => {
+    return <FilmCard key={movie.id} movie={movie} />;
+  });
+  return <section>{movieCards}</section>;
+};
 
-export default FilmContainer;
+export default FilmsContainer;
