@@ -12,7 +12,9 @@ class MainContent extends Component {
   }
 
   componentDidMount() {
-    fetchData('movies').then((data) => this.setState({ movies: data }));
+    fetchData('movies').then((data) =>
+      this.setState({ movies: [...this.state.movies, ...data.movies] })
+    );
   }
 
   render() {
