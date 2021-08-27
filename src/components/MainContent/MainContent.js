@@ -23,3 +23,11 @@ class MainContent extends Component {
 }
 
 export default MainContent;
+
+
+
+// we want to handle our click event here on our film container to render correct page
+// movie details page
+
+// create a handle click function to pass into our return FilmsContainer component
+// handle click function will update state ...what do we want to call that property? to enable the function being passed into other component
