@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FilmContainer from '../FilmsContainer/FilmsContainer';
+import FilmsContainer from '../FilmsContainer/FilmsContainer';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 
@@ -16,7 +16,7 @@ class MainContent extends Component {
   }
 
   render() {
-    return <FilmContainer movies={this.state.movies} />;
+    return <FilmsContainer movies={this.state.movies} />;
   }
 }
 
