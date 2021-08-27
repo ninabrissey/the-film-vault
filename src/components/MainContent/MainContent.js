@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FilmContainer from '../FilmsContainer/FilmsContainer';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 
@@ -15,8 +16,7 @@ class MainContent extends Component {
   }
 
   render() {
-    console.log(fetchData('movies'));
-    return <h1>Main Content</h1>;
+    return <FilmContainer movies={this.state.movies} />;
   }
 }
 
