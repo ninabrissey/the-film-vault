@@ -30,7 +30,7 @@ class Movie extends Component {
         console.log('videos', this.state.video.key)
 
     return (
-      <section>
+      <section className='movie-details'>
         <h2>{title}</h2>
         <h3>{average_rating}</h3>
         <img src={poster_path} alt={`${title} movie poster`} />
