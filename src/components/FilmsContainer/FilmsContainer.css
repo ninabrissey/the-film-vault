@@ -5,3 +5,8 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+.hidden {
+  display: none;
+}
