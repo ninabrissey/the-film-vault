@@ -10,6 +10,7 @@ class MainContent extends Component {
     this.state = {
       movies: [],
       isAllMoviesDisplayed: true,
+      movieID: null,
     };
   }
 
@@ -19,8 +20,8 @@ class MainContent extends Component {
     );
   }
 
-  showMovieDetails = () => {
-    this.setState({ isAllMoviesDisplayed: false });
+  showMovieDetails = (id) => {
+    this.setState({ isAllMoviesDisplayed: false, movieID: id });
   };
 
   render() {
@@ -32,7 +33,9 @@ class MainContent extends Component {
             showMovieDetails={this.showMovieDetails}
           />
         )}
-        {!this.state.isAllMoviesDisplayed && <Movie movieID={577922} />}
+        {!this.state.isAllMoviesDisplayed && (
+          <Movie movieID={this.state.movieID} />
+        )}
       </div>
     );
   }
@@ -40,8 +43,4 @@ class MainContent extends Component {
 
 export default MainContent;
 
-// we want to handle our click event here on our film container to render correct page
-// movie details page
-
 // create a handle click function to pass into our return FilmsContainer component
-// handle click function will update state ...what do we want to call that property? to enable the function being passed into other component
