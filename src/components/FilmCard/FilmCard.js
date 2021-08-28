@@ -3,7 +3,7 @@ import './FilmCard.css';
 const FilmCard = ({ movie, showMovieDetails }) => {
   return (
     <article
-      onClick={showMovieDetails(movie.id)}
+      onClick={() => showMovieDetails(movie.id)}
       className="film-card"
       id={movie.id}
     >
