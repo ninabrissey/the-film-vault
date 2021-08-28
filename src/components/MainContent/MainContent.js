@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
+import Movie from '../Movie/Movie';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 
@@ -8,6 +9,7 @@ class MainContent extends Component {
     super();
     this.state = {
       movies: [],
+      isAllMoviesDisplayed: true,
     };
   }
 
@@ -17,14 +19,26 @@ class MainContent extends Component {
     );
   }
 
+  showMovieDetails = () => {
+    this.setState({ isAllMoviesDisplayed: false });
+  };
+
   render() {
-    return <FilmsContainer movies={this.state.movies} />;
+    return (
+      <div>
+        {this.state.isAllMoviesDisplayed && (
+          <FilmsContainer
+            movies={this.state.movies}
+            showMovieDetails={this.showMovieDetails}
+          />
+        )}
+        {!this.state.isAllMoviesDisplayed && <Movie movieID={577922} />}
+      </div>
+    );
   }
 }
 
 export default MainContent;
-
-
 
 // we want to handle our click event here on our film container to render correct page
 // movie details page
