@@ -1,5 +1,4 @@
 import Nav from '../Nav/Nav';
-import Movie from '../Movie/Movie';
 import MainContent from '../MainContent/MainContent';
 import './App.css';
 
