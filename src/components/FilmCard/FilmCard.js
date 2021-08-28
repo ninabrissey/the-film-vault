@@ -2,7 +2,11 @@ import './FilmCard.css';
 
 const FilmCard = ({ movie, showMovieDetails }) => {
   return (
-    <article onClick={showMovieDetails} className="film-card" id={movie.id}>
+    <article
+      onClick={showMovieDetails(movie.id)}
+      className="film-card"
+      id={movie.id}
+    >
       <img
         src={movie.poster_path}
         alt="movie poster"
