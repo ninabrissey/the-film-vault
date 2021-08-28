@@ -5,13 +5,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <Nav />
       <MainContent />
       <footer>
         <h5>The Film Vault</h5>
       </footer>
-      <Movie movieID={694919}/>
     </div>
   );
 }
