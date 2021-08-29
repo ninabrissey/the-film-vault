@@ -15,10 +15,3 @@ const FilmsContainer = ({ movies, showMovieDetails }) => {
 };
 
 export default FilmsContainer;
-
-// function
-// event target key === specific movie
-// display the movie details
-// and hide the films container
-
-// pass that function into our films-container section onClick
