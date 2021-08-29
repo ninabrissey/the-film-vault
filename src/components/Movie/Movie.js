@@ -34,9 +34,6 @@ class Movie extends Component {
       average_rating,
     } = this.state.movie;
 
-    console.log('movie', this.state.movie);
-    console.log('videos', this.state.video.key);
-
     return (
       <section className="movie-details">
         <div className="movie-details">
