@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
-import Movie from '../Movie/Movie';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 
 class MainContent extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       movies: [],
-      isAllMoviesDisplayed: true,
-      movieID: null,
     };
   }
 
@@ -20,22 +17,14 @@ class MainContent extends Component {
     );
   }
 
-  showMovieDetails = (id) => {
-    this.setState({ isAllMoviesDisplayed: false, movieID: id });
-  };
-
   render() {
     return (
       <div>
-        {this.state.isAllMoviesDisplayed && (
+        {this.props.showMovieDetails && 
           <FilmsContainer
             movies={this.state.movies}
-            showMovieDetails={this.showMovieDetails}
-          />
-        )}
-        {!this.state.isAllMoviesDisplayed && (
-          <Movie movieID={this.state.movieID} />
-        )}
+            showMovieDetails={this.props.showMovieDetails}
+          />}
       </div>
     );
   }
@@ -43,4 +32,3 @@ class MainContent extends Component {
 
 export default MainContent;
 
-// create a handle click function to pass into our return FilmsContainer component

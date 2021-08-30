@@ -1,12 +1,13 @@
-
 .movie-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 80vw;
 }
 
+/* .details2-container {
+  width: 80vw;
+} */
 
-
-.hidden {
-  display: none;
-}
+/* .movie-poster {
+  
+} */
