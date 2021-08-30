@@ -36,12 +36,12 @@ class Movie extends Component {
 
     return (
       <section className="movie-details">
-        <div className="movie-details">
+        <div className="details1-container">
           <h2>{title}</h2>
           <h3>{average_rating}</h3>
         </div>
-        <div className="movie-details">
-          <img src={poster_path} alt={`${title} movie poster`} />
+        <div className="details2-container">
+          <img className="movie-poster" src={poster_path} alt={`${title} movie poster`} />
           <iframe
             title="Embedded YouTube Video"
             width="650"
@@ -51,7 +51,7 @@ class Movie extends Component {
             allowFullScreen
           />
         </div>
-        <div className="movie-details">
+        <div className="details3-container">
           <p>{tagline}</p>
           <p>{overview}</p>
           <p>{release_date}</p>
