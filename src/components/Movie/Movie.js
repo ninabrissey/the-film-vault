@@ -52,14 +52,14 @@ class Movie extends Component {
           />
         </div>
         <div className="details3-container">
-          <p>{tagline}</p>
-          <p>{overview}</p>
-          <p>{release_date}</p>
+          <p>Tagline: {tagline}</p>
+          <p>Overview: {overview}</p>
+          <p>Realease Date:{release_date}</p>
           {/* {genres.length > 1 && genres.map((genre) => <p>{genre}</p>)}
           {genres.length === 1 && <p>{genres[0]}</p>} */}
-          <p>{genres}</p>
-          <p>{runtime}</p>
-          <p>{budget}</p>
+          <p>Genres: {genres}</p>
+          <p>Runtime: {runtime}</p>
+          <p>Budget: {budget}</p>
         </div>
       </section>
     );
