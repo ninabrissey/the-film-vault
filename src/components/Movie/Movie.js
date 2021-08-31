@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import fetchData from '../../apiCalls';
 import './Movie.css';
-const formatter = new Intl.NumberFormat('en-US', {
+var dayjs = require('dayjs');
+var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
   maximumFractionDigits: 0,
@@ -79,7 +80,7 @@ class Movie extends Component {
         <div className="details3-container">
           <p>{tagline}</p>
           <p>Overview: {overview}</p>
-          <p>Release Date: {release_date}</p>
+          <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
           {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
           {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
           {budget > 0 && <p>Budget: {budget}</p>}
