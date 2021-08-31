@@ -27,13 +27,13 @@ class MainContent extends Component {
         {!this.state.movies.length && (
           <p>This is where we'll put our loading page</p>
         )}
-        {this.props.showMovieDetails && (
-          <FilmsContainer
-            movies={this.state.movies}
-            showMovieDetails={this.props.showMovieDetails}
-            formatRating={this.props.formatRating}
-          />
-        )}
+        {/* {this.props.showMovieDetails && ( */}
+        <FilmsContainer
+          movies={this.state.movies}
+          showMovieDetails={this.props.showMovieDetails}
+          formatRating={this.props.formatRating}
+        />
+        {/* )} */}
       </div>
     );
   }
