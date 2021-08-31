@@ -83,7 +83,7 @@ class Movie extends Component {
           <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
           {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
           {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
-          {budget > 0 && <p>Budget: {budget}</p>}
+          {budget > 0 && <p>Budget: {formatter.format(budget)}</p>}
           {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
         </div>
       </section>
