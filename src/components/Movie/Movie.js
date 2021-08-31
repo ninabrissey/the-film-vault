@@ -38,7 +38,6 @@ class Movie extends Component {
   };
 
   render() {
-    console.log(this.props.formatRating, 'props');
     const {
       title,
       poster_path,
