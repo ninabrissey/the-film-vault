@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import MainContent from '../MainContent/MainContent';
 import Movie from '../Movie/Movie';
@@ -14,7 +15,7 @@ class App extends Component {
   }
 
   showMovieDetails = (id) => {
-    this.setState({ isAllMoviesDisplayed: false, movieID: id });
+    this.setState({ isAllMoviesDisplayed: true, movieID: id });
   };
 
   showAllMovies = () => {
@@ -30,20 +31,38 @@ class App extends Component {
     return (
       <div className="app">
         <Nav showAllMovies={this.showAllMovies} />
-        {this.state.isAllMoviesDisplayed && (
+        {/* {this.state.isAllMoviesDisplayed && (
           <MainContent
             showAllMovies={this.showAllMovies}
             showMovieDetails={this.showMovieDetails}
             movieID={this.state.movieID}
             formatRating={this.formatRating}
-          />
-        )}
-        {!this.state.isAllMoviesDisplayed && (
+          />  
+        )} */}
+
+        <Route exact path="/" render={() => ( <MainContent
+            showAllMovies={this.showAllMovies}
+            showMovieDetails={this.showMovieDetails}
+            movieID={this.state.movieID}
+            formatRating={this.formatRating}
+          />  
+        )} />
+
+        {/* <Route exact path="/movies" render={() => { MainContent }} /> */}
+
+        {/* {!this.state.isAllMoviesDisplayed && (
           <Movie
             movieID={this.state.movieID}
             formatRating={this.formatRating}
           />
-        )}
+        )} */}
+
+        <Route exact path="/movies/:movieID" render={({ match }) => ( <Movie
+            movieID={match.params.movieID}
+            formatRating={this.formatRating}
+          />
+        )} />
+
         <footer>
           <h5>The Film Vault</h5>
         </footer>
