@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import MainContent from '../MainContent/MainContent';
 import Movie from '../Movie/Movie';
@@ -10,29 +10,40 @@ class App extends Component {
     this.state = {
       isAllMoviesDisplayed: true,
       movieID: null,
-    }
+    };
   }
 
   showMovieDetails = (id) => {
-    this.setState({ isAllMoviesDisplayed: false, movieID: id  });
-  }
+    this.setState({ isAllMoviesDisplayed: false, movieID: id });
+  };
 
   showAllMovies = () => {
     this.setState({ isAllMoviesDisplayed: true });
-  }
+  };
+
+  formatRating = (rating) => {
+    let formattedRating = rating.toFixed(1);
+    return formattedRating;
+  };
 
   render() {
     return (
       <div className="app">
-        <Nav 
-          showAllMovies={this.showAllMovies}
-        /> 
-        {this.state.isAllMoviesDisplayed && <MainContent 
-          showAllMovies={this.showAllMovies}
-          showMovieDetails={this.showMovieDetails}
-          movieID={this.state.movieID}
-        />}
-        {!this.state.isAllMoviesDisplayed && <Movie movieID={this.state.movieID} />}
+        <Nav showAllMovies={this.showAllMovies} />
+        {this.state.isAllMoviesDisplayed && (
+          <MainContent
+            showAllMovies={this.showAllMovies}
+            showMovieDetails={this.showMovieDetails}
+            movieID={this.state.movieID}
+            formatRating={this.formatRating}
+          />
+        )}
+        {!this.state.isAllMoviesDisplayed && (
+          <Movie
+            movieID={this.state.movieID}
+            formatRating={this.formatRating}
+          />
+        )}
         <footer>
           <h5>The Film Vault</h5>
         </footer>
