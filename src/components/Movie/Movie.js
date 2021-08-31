@@ -52,16 +52,14 @@ class Movie extends Component {
       average_rating,
     } = this.state.movie;
 
-    console.log(typeof budget, 'budget');
+    // const joinedGenres = genres.join(', ');
+    // console.log(typeof genres, genres, 'genres');
 
     return (
       <section className="movie-details">
         <div className="details1-container">
           <h2>{title}</h2>
-          <h3>
-            {typeof runtime === 'number' &&
-              this.props.formatRating(average_rating)}
-          </h3>
+          <h3>{average_rating && this.props.formatRating(average_rating)}</h3>
         </div>
         <div className="details2-container">
           <img
@@ -79,15 +77,13 @@ class Movie extends Component {
           />
         </div>
         <div className="details3-container">
-          <p>Tagline: {tagline}</p>
+          <p>{tagline}</p>
           <p>Overview: {overview}</p>
-          <p>Release Date:{release_date}</p>
-          {/* {genres.length > 1 && genres.map((genre) => <p>{genre}</p>)}
-          {genres.length === 1 && <p>{genres[0]}</p>} */}
-          {genres && <p>Genres: {genres}</p>}
-          {runtime !== 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
-          {budget !== 0 && <p>Budget: {budget}</p>}
-          {revenue !== 0 && <p>Revenue: {formatter.format(revenue)}</p>}
+          <p>Release Date: {release_date}</p>
+          {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
+          {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
+          {budget > 0 && <p>Budget: {budget}</p>}
+          {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
         </div>
       </section>
     );
