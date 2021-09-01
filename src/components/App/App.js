@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import MainContent from '../MainContent/MainContent';
 import Movie from '../Movie/Movie';
+import logo from '../../logo.png';
 import './App.css';
 
 class App extends Component {
@@ -31,15 +32,6 @@ class App extends Component {
     return (
       <div className="app">
         <Nav showAllMovies={this.showAllMovies} />
-        {/* {this.state.isAllMoviesDisplayed && (
-          <MainContent
-            showAllMovies={this.showAllMovies}
-            showMovieDetails={this.showMovieDetails}
-            movieID={this.state.movieID}
-            formatRating={this.formatRating}
-          />  
-        )} */}
-
         <Route exact path="/" render={() => ( <MainContent
             showAllMovies={this.showAllMovies}
             showMovieDetails={this.showMovieDetails}
@@ -47,24 +39,20 @@ class App extends Component {
             formatRating={this.formatRating}
           />  
         )} />
-
-        {/* <Route exact path="/movies" render={() => { MainContent }} /> */}
-
-        {/* {!this.state.isAllMoviesDisplayed && (
-          <Movie
-            movieID={this.state.movieID}
-            formatRating={this.formatRating}
-          />
-        )} */}
-
         <Route exact path="/movies/:movieID" render={({ match }) => ( <Movie
             movieID={match.params.movieID}
             formatRating={this.formatRating}
           />
         )} />
-
         <footer>
-          <h5>The Film Vault</h5>
+          <Link to='/'>
+            <img 
+            className='logo' 
+            src={logo} 
+            alt='the film vault logo and link to go to main page'
+            onClick={() => this.showAllMovies()}
+          />
+          </Link>
         </footer>
       </div>
     );
