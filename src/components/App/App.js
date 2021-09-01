@@ -31,10 +31,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Nav showAllMovies={this.showAllMovies} />
+        <Nav />
         <Route exact path="/" render={() => ( <MainContent
-            showAllMovies={this.showAllMovies}
-            showMovieDetails={this.showMovieDetails}
             movieID={this.state.movieID}
             formatRating={this.formatRating}
           />  
@@ -50,7 +48,6 @@ class App extends Component {
             className='logo' 
             src={logo} 
             alt='the film vault logo and link to go to main page'
-            onClick={() => this.showAllMovies()}
           />
           </Link>
         </footer>
