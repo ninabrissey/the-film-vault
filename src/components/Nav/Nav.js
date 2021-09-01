@@ -2,7 +2,7 @@ import './Nav.css';
 import logo from '../../logo.png';
 import { Link, NavLink } from 'react-router-dom';
 
-const Nav = (props) => {
+const Nav = () => {
   return (
     <header>
       <h1>
@@ -15,7 +15,7 @@ const Nav = (props) => {
         </Link>
       </h1>
       <NavLink to='/'>
-        <button>All Movies</button>
+        <button className='all-movies-btn'>All Movies</button>
       </NavLink>  
     </header>
   );
