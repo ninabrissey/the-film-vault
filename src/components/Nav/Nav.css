@@ -1,7 +1,9 @@
 header {
   height: 15vh;
-  width: 100%;
+  width: 97%;
   background-color:#343A40;
+  /* background-color: black; */
+  border-bottom: 2px solid #00000040;
 }
 
 h1 {
