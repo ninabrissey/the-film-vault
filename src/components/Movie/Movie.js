@@ -53,9 +53,6 @@ class Movie extends Component {
       average_rating,
     } = this.state.movie;
 
-    // const joinedGenres = genres.join(', ');
-    // console.log(typeof genres, genres, 'genres');
-
     return (
       <section className="movie-details">
         <div className="details1-container">
