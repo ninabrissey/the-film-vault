@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom';
 import './FilmCard.css';
 var dayjs = require('dayjs');
 
-const FilmCard = ({ movie, showMovieDetails, formatRating }) => {
+const FilmCard = ({ movie, formatRating }) => {
   return (
     <article
-        onClick={() => showMovieDetails(movie.id)}
         className="film-card"
         id={movie.id}
       >
