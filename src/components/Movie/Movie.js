@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetchData from '../../apiCalls';
+import PropTypes from 'prop-types';
 import './Movie.css';
 var dayjs = require('dayjs');
 var formatter = new Intl.NumberFormat('en-US', {
@@ -87,5 +88,9 @@ class Movie extends Component {
     );
   }
 }
+
+Movie.propTypes = {
+  movieID: PropTypes.string,
+};
 
 export default Movie;
