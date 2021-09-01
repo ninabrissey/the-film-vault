@@ -1,6 +1,5 @@
 .app {
   background-color: #343A40;
-  /* background-color: black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +12,4 @@ footer {
   display: flex;
   justify-content: center;
   padding: 10vh 0;
-}
-
-.logo {
-  margin: 0;
 }
