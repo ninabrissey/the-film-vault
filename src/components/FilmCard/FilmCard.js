@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './FilmCard.css';
 var dayjs = require('dayjs');
 
-const FilmCard = ({ movie, formatRating }) => {
+const FilmCard = ({ movie }) => {
   return (
     <article
         className="film-card"
@@ -18,7 +18,7 @@ const FilmCard = ({ movie, formatRating }) => {
         <div className="movie-info">
           <h3>{movie.title}</h3>
           <p>{dayjs(movie.release_date).format('YYYY')}</p>
-          <h4>{formatRating(movie.average_rating)}</h4>
+          {/* <h4>{formatRating(movie.average_rating)}</h4> */}
         </div>
       </article>
   );
