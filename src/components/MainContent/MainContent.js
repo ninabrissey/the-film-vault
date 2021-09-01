@@ -29,7 +29,6 @@ class MainContent extends Component {
         )}
         <FilmsContainer
           movies={this.state.movies}
-          formatRating={this.props.formatRating}
         />
       </div>
     );
