@@ -7,7 +7,7 @@ import logo from '../../logo.png';
 import './App.css';
 
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Nav />
