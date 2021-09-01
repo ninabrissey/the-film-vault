@@ -29,7 +29,6 @@ class MainContent extends Component {
         )}
         <FilmsContainer
           movies={this.state.movies}
-          showMovieDetails={this.props.showMovieDetails}
           formatRating={this.props.formatRating}
         />
       </div>
