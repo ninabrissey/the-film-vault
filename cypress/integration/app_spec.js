@@ -16,7 +16,9 @@ describe('The Film Vault Main Page', () => {
       .contains('Tenet');
   });
 
-  it('should be able to click a movie poster', () => {});
+  it('should be able to click a movie poster', () => {
+    cy.get.first('img').click().contains('http://localhost:3000/movies/694919');
+  });
 
   it('should ', () => {});
 
