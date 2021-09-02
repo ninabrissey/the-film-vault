@@ -4,8 +4,8 @@ import fetchData from '../../apiCalls';
 import './MainContent.css';
 
 class MainContent extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       movies: [],
       error: '',
@@ -27,9 +27,7 @@ class MainContent extends Component {
         {!this.state.movies.length && (
           <p>This is where we'll put our loading page</p>
         )}
-        <FilmsContainer
-          movies={this.state.movies}
-        />
+        <FilmsContainer movies={this.state.movies} />
       </div>
     );
   }
