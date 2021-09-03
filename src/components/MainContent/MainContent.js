@@ -24,7 +24,7 @@ class MainContent extends Component {
 
   filterMovies = (searchInput) => {
     const matchedMovies = this.state.movies.filter((movie) =>
-      movie.title.includes(searchInput)
+      movie.title.toLowerCase().includes(searchInput)
     );
     this.setState({ movies: matchedMovies });
     // needs to set state of filteredMovies not movies because
@@ -39,7 +39,7 @@ class MainContent extends Component {
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}
-        {!this.state.movies.length && (
+        {!this.state.movies.length && this.state.filteredMovies.length > 0 && (
           <p>This is where we'll put our loading page</p>
         )}
         <SearchBar
