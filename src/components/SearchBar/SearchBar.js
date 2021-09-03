@@ -24,6 +24,7 @@ class SearchBar extends Component {
           value={this.state.searchInput}
           onChange={(e) => this.handleChange(e)}
         />
+        <button onClick={() => this.props.clearFilteredMovies()}>clear</button>
       </form>
     );
   }
