@@ -3,8 +3,9 @@ beforeEach(() => {
 });
 
 describe('The Film Vault Main Page', () => {
-  it('should have an All Movies button', () => {
+  it('should be able to click all elements in Nav', () => {
     cy.get('button').contains('All Movies');
+    cy.get('header>a>img').click();
   });
 
   it('should render the correct elements', () => {
