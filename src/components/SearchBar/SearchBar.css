@@ -2,4 +2,31 @@
 form {
   position: absolute;
   z-index: 8;
+  border-bottom: 2px solid #ccccccbd;
+}
+
+.search-bar {
+  width: 40vw;
+  height: 8vh;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  color: white;
+}
+
+::placeholder {
+  color: #74c561;
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: #59b959;
 }
