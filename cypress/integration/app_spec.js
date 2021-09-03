@@ -21,9 +21,7 @@ describe('The Film Vault Main Page', () => {
     cy.get('article>a').eq(0).click();
   });
 
-  it('should ', () => {});
-
-  it('should ', () => {});
-
-  it('should ', () => {});
+  it('should be able to click the logo in the footer', () => {
+    cy.get('footer>a').click();
+  });
 });
