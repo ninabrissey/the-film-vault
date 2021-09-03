@@ -1,1 +1,5 @@
 /* add styling to ugly search bar */
+form {
+  position: absolute;
+  z-index: 8;
+}
