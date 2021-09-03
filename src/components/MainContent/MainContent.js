@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
+import SearchBar from '../SearchBar/SearchBar';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 
@@ -27,6 +28,7 @@ class MainContent extends Component {
         {!this.state.movies.length && (
           <p>This is where we'll put our loading page</p>
         )}
+        <SearchBar />
         <FilmsContainer movies={this.state.movies} />
       </div>
     );
