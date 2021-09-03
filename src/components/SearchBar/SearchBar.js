@@ -2,8 +2,8 @@ import { Component } from 'react';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       searchInput: '',
     };
@@ -11,6 +11,7 @@ class SearchBar extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+    this.props.filterMovies(this.state.searchInput);
   };
 
   render() {
