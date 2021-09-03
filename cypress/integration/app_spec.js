@@ -9,7 +9,7 @@ describe('The Film Vault Main Page', () => {
   });
 
   it('should render the correct elements', () => {
-    cy.get('h3').contains('Tenet');
+    cy.get('h3').contains('Money Plane').get('p').contains('2020');
   });
 
   it('should be able to click a movie poster', () => {
