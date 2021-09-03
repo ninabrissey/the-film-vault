@@ -11,7 +11,7 @@ class SearchBar extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    this.props.filterMovies(this.state.searchInput);
+    this.props.filterMovies(this.state.searchInput.toLowerCase());
   };
 
   render() {
@@ -23,6 +23,7 @@ class SearchBar extends Component {
           name="searchInput"
           value={this.state.searchInput}
           onChange={(e) => this.handleChange(e)}
+          autoComplete="off"
         />
         <button onClick={() => this.props.clearFilteredMovies()}>clear</button>
       </form>
