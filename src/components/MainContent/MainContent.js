@@ -37,7 +37,7 @@ class MainContent extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         {this.state.error && <p>{this.state.error}</p>}
         {!this.state.movies.length && this.state.filteredMovies.length > 0 && (
           <p>This is where we'll put our loading page</p>
@@ -47,7 +47,7 @@ class MainContent extends Component {
           clearFilteredMovies={this.clearFilteredMovies}
         />
         <FilmsContainer movies={this.state.filteredMovies} />
-      </div>
+      </main>
     );
   }
 }
