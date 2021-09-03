@@ -18,6 +18,7 @@ class SearchBar extends Component {
     return (
       <form>
         <input
+          className="search-bar"
           aria-label="search bar"
           placeholder="Search..."
           name="searchInput"
@@ -25,7 +26,9 @@ class SearchBar extends Component {
           onChange={(e) => this.handleChange(e)}
           autoComplete="off"
         />
-        <button onClick={() => this.props.clearFilteredMovies()}>clear</button>
+        <button 
+          className="clear-btn"
+          onClick={() => this.props.clearFilteredMovies()}>clear</button>
       </form>
     );
   }
