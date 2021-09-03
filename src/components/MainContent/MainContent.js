@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
 import fetchData from '../../apiCalls';
+// import partyTitle from '../../party-title.png'
 import './MainContent.css';
+
 
 class MainContent extends Component {
   constructor() {
@@ -27,6 +29,7 @@ class MainContent extends Component {
         {!this.state.movies.length && (
           <p>This is where we'll put our loading page</p>
         )}
+        {/* <img className='party-title' src={partyTitle} alt='party title' /> */}
         <FilmsContainer movies={this.state.movies} />
       </div>
     );
