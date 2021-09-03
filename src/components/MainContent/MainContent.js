@@ -9,7 +9,7 @@ class MainContent extends Component {
     super();
     this.state = {
       movies: [],
-      // filteredMovies: [],
+      filteredMovies: [],
       error: '',
     };
   }
@@ -31,6 +31,10 @@ class MainContent extends Component {
     // we will not have the array of original movies to got back to
   };
 
+  clearFilteredMovies = () => {
+    this.setState({ filteredMovies: [] });
+  };
+
   render() {
     return (
       <div>
@@ -38,8 +42,16 @@ class MainContent extends Component {
         {!this.state.movies.length && (
           <p>This is where we'll put our loading page</p>
         )}
-        <SearchBar filterMovies={this.filterMovies} />
-        <FilmsContainer movies={this.state.movies} />
+        <SearchBar
+          filterMovies={this.filterMovies}
+          clearFilteredMovies={this.clearFilteredMovies}
+        />
+        {!this.state.filteredMovies.length && (
+          <FilmsContainer movies={this.state.movies} />
+        )}
+        {this.state.filteredMovies > 0 && (
+          <FilmsContainer movies={this.state.filteredMovies} />
+        )}
       </div>
     );
   }
