@@ -5,3 +5,10 @@ div {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+/* 
+.party-title {
+  height: 30vh;
+  width: auto;
+  margin-left: -220px;
+} */
