@@ -17,7 +17,7 @@ class MainContent extends Component {
   componentDidMount() {
     fetchData('movies')
       .then((data) =>
-        this.setState({ movies: [...this.state.movies, ...data.movies] })
+        this.setState({ movies: data.movies, filteredMovies: data.movies })
       )
       .catch((err) => this.setState({ error: err }));
   }
@@ -26,9 +26,7 @@ class MainContent extends Component {
     const matchedMovies = this.state.movies.filter((movie) =>
       movie.title.toLowerCase().includes(searchInput)
     );
-    this.setState({ movies: matchedMovies });
-    // needs to set state of filteredMovies not movies because
-    // we will not have the array of original movies to got back to
+    this.setState({ filteredMovies: matchedMovies });
   };
 
   clearFilteredMovies = () => {
@@ -46,12 +44,7 @@ class MainContent extends Component {
           filterMovies={this.filterMovies}
           clearFilteredMovies={this.clearFilteredMovies}
         />
-        {!this.state.filteredMovies.length && (
-          <FilmsContainer movies={this.state.movies} />
-        )}
-        {this.state.filteredMovies > 0 && (
-          <FilmsContainer movies={this.state.filteredMovies} />
-        )}
+        <FilmsContainer movies={this.state.filteredMovies} />
       </div>
     );
   }
