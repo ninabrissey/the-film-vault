@@ -58,7 +58,7 @@ class Movie extends Component {
       <section className="movie-details">
         <div className="details1-container">
           <h2>{title}</h2>
-          {/* <h3>{average_rating && this.props.formatRating(average_rating)}</h3> */}
+          <h3>{average_rating && Math.round(average_rating * 10) / 10}</h3>
         </div>
         <div className="details2-container">
           <img

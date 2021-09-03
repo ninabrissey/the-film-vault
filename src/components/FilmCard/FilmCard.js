@@ -16,7 +16,7 @@ const FilmCard = ({ movie }) => {
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <p>{dayjs(movie.release_date).format('YYYY')}</p>
-        {/* <h4>{formatRating(movie.average_rating)}</h4> */}
+        <h4>{Math.round(movie.average_rating * 10) / 10}</h4>
       </div>
     </article>
   );
