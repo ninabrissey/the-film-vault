@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
+import SearchBar from '../SearchBar/SearchBar';
 import fetchData from '../../apiCalls';
 // import partyTitle from '../../party-title.png'
 import './MainContent.css';
@@ -10,6 +11,7 @@ class MainContent extends Component {
     super();
     this.state = {
       movies: [],
+      filteredMovies: [],
       error: '',
     };
   }
@@ -17,20 +19,34 @@ class MainContent extends Component {
   componentDidMount() {
     fetchData('movies')
       .then((data) =>
-        this.setState({ movies: [...this.state.movies, ...data.movies] })
+        this.setState({ movies: data.movies, filteredMovies: data.movies })
       )
       .catch((err) => this.setState({ error: err }));
   }
+
+  filterMovies = (searchInput) => {
+    const matchedMovies = this.state.movies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchInput)
+    );
+    this.setState({ filteredMovies: matchedMovies });
+  };
+
+  clearFilteredMovies = () => {
+    this.setState({ filteredMovies: [] });
+  };
 
   render() {
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}
-        {!this.state.movies.length && (
+        {!this.state.movies.length && this.state.filteredMovies.length > 0 && (
           <p>This is where we'll put our loading page</p>
         )}
-        {/* <img className='party-title' src={partyTitle} alt='party title' /> */}
-        <FilmsContainer movies={this.state.movies} />
+        <SearchBar
+          filterMovies={this.filterMovies}
+          clearFilteredMovies={this.clearFilteredMovies}
+        />
+        <FilmsContainer movies={this.state.filteredMovies} />
       </div>
     );
   }

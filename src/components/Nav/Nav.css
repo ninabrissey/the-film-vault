@@ -27,7 +27,7 @@ header {
   height: 80vh;
   z-index: 2;
   background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,4.78195) 20%, rgba(102,103,107,0.3071) 50%);
+  background: linear-gradient(90deg, rgba(0,0,0,4.78195) 20%, rgba(0,0,0,0.3071) 50%);
 }
 
 .nav-navigation {
