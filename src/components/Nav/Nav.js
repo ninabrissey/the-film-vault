@@ -17,7 +17,9 @@ const Nav = () => {
           />
         </Link>
         <NavLink to="/">
-          <button className="all-movies-btn">All Movies</button>
+          {/* <div class="container"> */}
+            <button className="all-movies-btn">All Movies</button>
+          {/* </div> */}
         </NavLink>
       </div>
       <img className='party-title' src={partyTitle} alt='party title' />
