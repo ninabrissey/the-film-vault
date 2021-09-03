@@ -19,7 +19,7 @@ class SearchBar extends Component {
       <form>
         <input
           aria-label="search bar"
-          placeholder="Search"
+          placeholder="Search..."
           name="searchInput"
           value={this.state.searchInput}
           onChange={(e) => this.handleChange(e)}
