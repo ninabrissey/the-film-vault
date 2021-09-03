@@ -42,7 +42,6 @@ header {
   padding: 10px 0;
 }
 
-
 .logo {
   height: 14vh;
   width: auto;
@@ -50,6 +49,46 @@ header {
 
 .all-movies-btn {
   margin: 15px;
+  background: transparent;
+  color: #59b959;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid #59b959;
+}
+
+.all-movies-btn:hover,
+.all-movies-btn:active {
+letter-spacing: 5px;
+}
+
+/* .all-movies-btn:after,
+.all-movies-btn:before {
+backface-visibility: hidden;
+border: 1px solid white;
+bottom: 0px; */
+/* content: ""; */
+/* display: block;
+margin: 0 auto;
+position: relative;
+transition: all 280ms ease-in-out;
+width: 0;
+} */
+
+.all-movies-btn:hover:after,
+.all-movies-btn:hover:before {
+backface-visibility: hidden;
+border-color: #fff;
+transition: width 350ms ease-in-out;
+width: 70%;
+}
+
+.all-movies-btn:hover:before {
+bottom: auto;
+top: 0;
+width: 70%;
 }
 
 .party-title {
@@ -58,5 +97,4 @@ header {
   margin-left: 10px;
   margin-top: 25vh;
   z-index: 9;
-  /* position: absolute; */
 }
