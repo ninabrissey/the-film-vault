@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
 import SearchBar from '../SearchBar/SearchBar';
+import Loading from '../Loading/Loading';
 import fetchData from '../../apiCalls';
 // import partyTitle from '../../party-title.png'
 import './MainContent.css';
@@ -17,11 +18,13 @@ class MainContent extends Component {
   }
 
   componentDidMount() {
-    fetchData('movies')
-      .then((data) =>
-        this.setState({ movies: data.movies, filteredMovies: data.movies })
-      )
-      .catch((err) => this.setState({ error: err }));
+    setTimeout(() => {
+      fetchData('movies')
+        .then((data) =>
+          this.setState({ movies: data.movies, filteredMovies: data.movies })
+        )
+        .catch((err) => this.setState({ error: err }));
+    }, 5000);
   }
 
   filterMovies = (searchInput) => {
@@ -39,13 +42,13 @@ class MainContent extends Component {
     return (
       <main>
         {this.state.error && <p>{this.state.error}</p>}
-        {!this.state.movies.length && this.state.filteredMovies.length > 0 && (
-          <p>This is where we'll put our loading page</p>
+        {this.state.movies.length > 0 && (
+          <SearchBar
+            filterMovies={this.filterMovies}
+            clearFilteredMovies={this.clearFilteredMovies}
+          />
         )}
-        <SearchBar
-          filterMovies={this.filterMovies}
-          clearFilteredMovies={this.clearFilteredMovies}
-        />
+        {!this.state.movies.length && <Loading />}
         <FilmsContainer movies={this.state.filteredMovies} />
       </main>
     );
