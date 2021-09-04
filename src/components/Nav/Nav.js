@@ -17,9 +17,7 @@ const Nav = () => {
           />
         </Link>
         <NavLink to="/">
-          {/* <div class="container"> */}
-            <button className="all-movies-btn">All Movies</button>
-          {/* </div> */}
+          <button className="all-movies-btn">All Movies</button>
         </NavLink>
       </div>
       <img className='party-title' src={partyTitle} alt='party title' />
@@ -28,3 +26,7 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+
+// #020606  color for behind logo
