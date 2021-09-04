@@ -1,5 +1,6 @@
 .app {
-  background-color: #343A40;
+  /* background-color: #343A40; */
+  background-color: #1d1d1d;
   display: flex;
   flex-direction: column;
   align-items: center;
