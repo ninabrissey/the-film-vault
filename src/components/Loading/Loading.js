@@ -3,14 +3,12 @@ import './Loading.css';
 
 const Loading = () => {
   return (
-    <div>
-      <header className="Loading-header">
-        <img src={loadingLogo} className="Loading-logo" alt="loading logo" />
-        {/* <p>
+    <div className="loading">
+      <img src={loadingLogo} className="loading-logo" alt="loading logo" />
+      {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
-        {/* for reference for styling purposes - look at index.css */}
-      </header>
+      {/* for reference for styling purposes - look at index.css */}
     </div>
   );
 };
