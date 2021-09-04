@@ -12,16 +12,13 @@
   height: 50vh;
   width: auto;
   border-radius: 2px;
-  box-shadow:
-  0 -1.9px 2.3px rgba(0, 0, 0, -0.007),
-  0 -2.9px 4.9px rgba(0, 0, 0, 0.043),
-  0 -2.2px 8.6px rgba(0, 0, 0, 0.096),
-  0 2.3px 15.7px rgba(0, 0, 0, 0.131),
-  /* 0 17.9px 32.7px rgba(0, 0, 0, 0.142),
-  0 83px 93px rgba(0, 0, 0, 0.13); */
-  0 17.9px 32.7px #58575752, 
-  0 41px 93px #787373;
   transition: all .2s ease-in-out;
+  box-shadow:
+    0 4.7px 13px rgb(123 123 123 / 30%), 
+    0 11.4px 23.8px rgb(27 27 27 / 42%), 
+    0 21.4px 38.2px rgb(0 0 0 / 17%), 
+    0 38.1px 77.1px rgb(27 27 27 / 2%), 
+    0 75px 268px rgb(29 29 29 / 63%);
 }
 
 .movie-poster:hover {
