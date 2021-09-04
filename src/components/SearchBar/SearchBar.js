@@ -20,6 +20,7 @@ class SearchBar extends Component {
       <form>
         <Link to="/search">
           <input
+            className="search-bar"
             aria-label="search bar"
             placeholder="Search"
             name="searchInput"

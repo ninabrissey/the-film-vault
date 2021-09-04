@@ -1,7 +1,14 @@
-div {
+main {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+/* 
+.party-title {
+  height: 30vh;
+  width: auto;
+  margin-left: -220px;
+} */

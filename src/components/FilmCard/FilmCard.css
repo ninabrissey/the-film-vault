@@ -4,17 +4,49 @@
 }
 
 .film-card {
-  /* height: 70vh;
-  width: auto; */
   margin: 10px;
 }
 
 .movie-poster {
-  height: 50vh;
+  height: 55vh;
   width: auto;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  box-shadow:
+    0 4.7px 13px rgb(123 123 123 / 30%), 
+    0 11.4px 23.8px rgb(27 27 27 / 42%), 
+    0 21.4px 38.2px rgb(0 0 0 / 17%), 
+    0 38.1px 77.1px rgb(27 27 27 / 2%), 
+    0 75px 268px rgb(29 29 29 / 63%);
+}
+
+.movie-poster:hover {
+  transform: scale(1.1);
 }
 
 .movie-info {
   height: 10vh;
-  width: auto;
+  width: 19vw;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+}
+
+h3 {
+  word-break: break-word;
+  font-size: 1.1em;
+  width: 85%;
+  height: 50%;
+}
+
+h4 {
+  color: #59b959;
+  font-size: 1.75em;
+  height: 5vh;
 }
