@@ -1,6 +1,7 @@
-
 .movie-details {
   display: flex;
   flex-direction: column;
   width: 80vw;
+
+  margin-top: 15vh;
 }
