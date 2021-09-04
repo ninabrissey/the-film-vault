@@ -3,9 +3,9 @@ import './Loading.css';
 
 const Loading = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={loadingLogo} className="App-logo" alt="logo" />
+    <div>
+      <header className="Loading-header">
+        <img src={loadingLogo} className="Loading-logo" alt="loading logo" />
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
