@@ -10,6 +10,7 @@ const App = () => {
     <div className="app">
       <Nav />
       <Route exact path="/" render={() => <MainContent />} />
+      <Route exact path="/search" render={() => <MainContent />} />
       <Route
         exact
         path="/movies/:movieID"

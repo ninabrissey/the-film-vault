@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -17,18 +18,22 @@ class SearchBar extends Component {
   render() {
     return (
       <form>
-        <input
-          className="search-bar"
-          aria-label="search bar"
-          placeholder="Search..."
-          name="searchInput"
-          value={this.state.searchInput}
-          onChange={(e) => this.handleChange(e)}
-          autoComplete="off"
-        />
-        <button 
-          className="clear-btn"
-          onClick={() => this.props.clearFilteredMovies()}>clear</button>
+        <Link to="/search">
+          <input
+            className="search-bar"
+            aria-label="search bar"
+            placeholder="Search"
+            name="searchInput"
+            value={this.state.searchInput}
+            onChange={(e) => this.handleChange(e)}
+            autoComplete="off"
+          />
+        </Link>
+        <Link to="/">
+          <button onClick={() => this.props.clearFilteredMovies()}>
+            clear
+          </button>
+        </Link>
       </form>
     );
   }
