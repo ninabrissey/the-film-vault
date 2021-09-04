@@ -1,15 +1,15 @@
-.Loading-logo {
+.loading-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .Loading-logo {
-    animation: App-logo-spin infinite 10.2s linear;
+  .loading-logo {
+    animation: App-logo-spin 10.2s linear;
   }
 }
 
-.Loading-header {
+.loading {
   /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
