@@ -12,6 +12,8 @@ form {
   border: none;
   font-size: 2em;
   color: white;
+
+  outline: none;
 }
 
 ::placeholder {
