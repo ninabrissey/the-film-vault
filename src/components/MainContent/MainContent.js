@@ -18,13 +18,13 @@ class MainContent extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    if (!this.state.movies.length) {
       fetchData('movies')
         .then((data) =>
           this.setState({ movies: data.movies, filteredMovies: data.movies })
         )
         .catch((err) => this.setState({ error: err }));
-    }, 5000);
+    }
   }
 
   filterMovies = (searchInput) => {
