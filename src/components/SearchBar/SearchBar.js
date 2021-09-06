@@ -15,9 +15,13 @@ class SearchBar extends Component {
     this.props.filterMovies(e.target.value.toLowerCase());
   };
 
+  clearSearchInput = () => {
+    this.setState({searchInput: ''})
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={((e) => {e.preventDefault()})}>
         {/* <Link to="/search"> */}
           <input
             className="search-bar"
@@ -30,7 +34,7 @@ class SearchBar extends Component {
           />
         {/* </Link> */}
         {/* <Link to="/"> */}
-          <button onClick={this.props.clearFilteredMovies}>
+          <button type='submit' onClick={this.props.clearFilteredMovies}>
             clear
           </button>
         {/* </Link> */}
