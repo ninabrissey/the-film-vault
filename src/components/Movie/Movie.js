@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Link } from 'react';
+import Nav from '../Nav/Nav';
+
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
 import './Movie.css';
@@ -55,36 +57,39 @@ class Movie extends Component {
     } = this.state.movie;
 
     return (
-      <section className="movie-details">
-        <div className="details1-container">
-          <h2>{title}</h2>
-          <h3>{average_rating && Math.round(average_rating * 10) / 10}</h3>
-        </div>
-        <div className="details2-container">
-          <img
-            className="individual-movie-poster"
-            src={poster_path}
-            alt={`${title} movie poster`}
-          />
-          <iframe
-            title="Embedded YouTube Video"
-            width="650"
-            height="380"
-            src={`https://www.youtube.com/embed/${this.state.video.key}`}
-            frameBorder="0"
-            allowFullScreen
-          />
-        </div>
-        <div className="details3-container">
-          <p>{tagline}</p>
-          <p>Overview: {overview}</p>
-          <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
-          {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
-          {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
-          {budget > 0 && <p>Budget: {formatter.format(budget)}</p>}
-          {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
-        </div>
-      </section>
+      <>
+        <Nav />
+        <section className="movie-details">
+          <div className="details1-container">
+            <h2>{title}</h2>
+            <h3>{average_rating && Math.round(average_rating * 10) / 10}</h3>
+          </div>
+          <div className="details2-container">
+            <img
+              className="individual-movie-poster"
+              src={poster_path}
+              alt={`${title} movie poster`}
+            />
+            <iframe
+              title="Embedded YouTube Video"
+              width="650"
+              height="380"
+              src={`https://www.youtube.com/embed/${this.state.video.key}`}
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="details3-container">
+            <p>{tagline}</p>
+            <p>Overview: {overview}</p>
+            <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
+            {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
+            {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
+            {budget > 0 && <p>Budget: {formatter.format(budget)}</p>}
+            {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
+          </div>
+        </section>
+      </>
     );
   }
 }
