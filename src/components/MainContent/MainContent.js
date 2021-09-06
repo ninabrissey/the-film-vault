@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import Nav from '../Nav/Nav';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import Loading from '../Loading/Loading';
 import fetchData from '../../apiCalls';
 // import partyTitle from '../../party-title.png'
 import './MainContent.css';
+import logo from '../../logo.png';
 
 
 class MainContent extends Component {
@@ -35,22 +39,42 @@ class MainContent extends Component {
   };
 
   clearFilteredMovies = () => {
-    this.setState({ filteredMovies: [] });
+    this.setState({ filteredMovies: this.state.movies });
   };
+
+  getRandomHeaderImage = () => {
+    if (this.state.movies) {
+      const randomIndex = Math.floor(Math.random() * this.state.movies.length);
+      const randomMovie = this.state.movies[randomIndex]
+      return randomMovie
+    }
+  }
 
   render() {
     return (
-      <main>
-        {this.state.error && <p>{this.state.error}</p>}
-        {this.state.movies.length > 0 && (
-          <SearchBar
-            filterMovies={this.filterMovies}
-            clearFilteredMovies={this.clearFilteredMovies}
+      <>
+        <Nav movieObj={this.getRandomHeaderImage()}/>
+        <main>
+          {this.state.error && <p>{this.state.error}</p>}
+          {this.state.movies.length > 0 && (
+            <SearchBar
+              filterMovies={this.filterMovies}
+              clearFilteredMovies={this.clearFilteredMovies}
+            />
+          )}
+          {!this.state.movies.length && <Loading />}
+          <FilmsContainer movies={this.state.filteredMovies} />
+        </main>
+        <footer>
+        <Link to="/" onClick={() => {window.location.reload()}}>
+          <img
+            className="logo"
+            src={logo}
+            alt="the film vault logo and link to go to main page"
           />
-        )}
-        {!this.state.movies.length && <Loading />}
-        <FilmsContainer movies={this.state.filteredMovies} />
-      </main>
+        </Link>
+      </footer>
+      </>
     );
   }
 }
