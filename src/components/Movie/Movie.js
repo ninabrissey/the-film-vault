@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
 import './Movie.css';
-var dayjs = require('dayjs');
+import dayjs from 'dayjs';
 var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
@@ -62,7 +62,7 @@ class Movie extends Component {
         </div>
         <div className="details2-container">
           <img
-            className="movie-poster"
+            className="individual-movie-poster"
             src={poster_path}
             alt={`${title} movie poster`}
           />
