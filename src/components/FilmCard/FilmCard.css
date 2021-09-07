@@ -12,8 +12,6 @@
 }
 
 .movie-poster {
-  /* height: 50vh;
-  width: auto; */
   height: auto;
   width: 20vw;
   border-radius: 3px;
@@ -30,17 +28,12 @@
 .movie-info {
   height: 10vh;
   width: 100%;
-  /* padding: 3px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
 }
-
-/* section {
-  display: flex;
-} */
 
 .movie-title {
   word-break: break-word;
@@ -51,12 +44,12 @@
   padding: 5px;
 }
 
-p {
+.movie-release-date {
   font-size: 1.1em;
   padding: 5px;
 }
 
-.movie-release-date {
+.movie-rating {
   color: #59b959;
   font-size: 1.75em;
   height: 5vh;
