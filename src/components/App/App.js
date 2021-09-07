@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import MainContent from '../MainContent/MainContent';
 import Movie from '../Movie/Movie';
+import NotFound from '../NotFound/NotFound'
 import './App.css';
 
 const App = () => {
@@ -14,9 +15,8 @@ const App = () => {
           path="/movies/:movieID"
           render={({ match }) => <Movie movieID={match.params.movieID} />}
         />
-        <Route render={() => <p>page not found</p>}/>
+        <Route render={() => <NotFound />}/>
       </Switch>  
-      {/* need to make 404 page component */}
     </div>
   );
 };
