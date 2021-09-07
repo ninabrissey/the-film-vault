@@ -86,10 +86,6 @@ class Movie extends Component {
           </div>
           <p className="tagline">{tagline}</p>
           <div className="details3-container">
-            <p className="overview">
-              <span className="overview">OVERVIEW </span>
-              {overview}
-            </p>
             <div className="details4-container">
               <p>
                 <span>RELEASE DATE </span>
@@ -119,6 +115,12 @@ class Movie extends Component {
                   {formatter.format(revenue)}
                 </p>
               )}
+            </div>
+            <div className="overview-container">
+              <p className="overview">
+                <span className="overview">OVERVIEW </span>
+                {overview}
+              </p>
             </div>
           </div>
         </section>
