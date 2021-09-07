@@ -1,7 +1,12 @@
+.individual-movie-poster {
+  height: 55vh;
+  width: auto;
+  border-radius: 3px;
+}
+
 .movie-details {
   display: flex;
   flex-direction: column;
   width: 80vw;
-
   margin-top: 15vh;
 }
