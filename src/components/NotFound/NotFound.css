@@ -4,11 +4,11 @@
   text-align: center;
   padding-top: 5vh;
   height: 95vh;
-  width: 44vw;
-
+  width: 50vw;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .not-found-text {
@@ -18,22 +18,16 @@
 
   /* position: absolute; */
   z-index: 10;
-  width: 20vw;
+  width: 50vw;
 }
 
-.not-found-stat {
-  position: absolute;
-  z-index: 5;
-  left: 55.25vw;
-  top: 44.5vh;
-  font-size: 6.5em;
-  font-weight: 700;
-  /* margin-right: -230px; */
-}
-
-.not-found-logo {
+/* .not-found-logo {
   position: absolute;
   top: 32vh;
   left: 48vw;
   z-index: 1;
+} */
+
+.return-home {
+  font-size: 1.5em;
 }
