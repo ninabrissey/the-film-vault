@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import Nav from '../Nav/Nav';
 import FilmsContainer from '../FilmsContainer/FilmsContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import Loading from '../Loading/Loading';
 import fetchData from '../../apiCalls';
-// import partyTitle from '../../party-title.png'
 import './MainContent.css';
 import logo from '../../logo.png';
 
