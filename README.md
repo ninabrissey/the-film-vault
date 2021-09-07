@@ -20,7 +20,9 @@ README NOTES
   - [ ] [deployment](https://facebook.github.io/create-react-app/docs/deployment)
   - [ ] Create a user login
     - [ ] Create funtioncality that allows the user to rate a favorite movies
-  - [ ]
+
 - [ ] wins?
+
+- [ ] Partner communication and collaboration was extremely professional and consistent
 - [ ] anything gone wrong?
 - [ ] etc
