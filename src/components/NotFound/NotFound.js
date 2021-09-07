@@ -12,7 +12,7 @@ const NotFound = () => {
       <img className='not-found-logo' src={notFoundLogo} alt='the film vault logo' />
       <p 
       className='return-home'>Click 
-      <Link to='/'>HERE</Link> 
+      <Link to='/' className='return-home-link'> here </Link> 
       to go back to the Film Vault
       </p>
     </div>
