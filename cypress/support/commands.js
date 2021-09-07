@@ -1,3 +1,4 @@
+// Fetch stub to retrieve all movies //
 Cypress.Commands.add('fetchAllMovies', (method, baseURL) => {
   cy.intercept(`${method}`, `${baseURL}/movies`, {
     body: {
@@ -27,6 +28,7 @@ Cypress.Commands.add('fetchAllMovies', (method, baseURL) => {
   });
 });
 
+// Fetch stub to retrieve a single movies details //
 Cypress.Commands.add('fetchMovie', (method, baseURL) => {
   cy.intercept(`${method}`, `${baseURL}/movies/694919`, {
     body: {

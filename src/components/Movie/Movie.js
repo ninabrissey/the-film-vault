@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
@@ -20,7 +20,7 @@ class Movie extends Component {
     this.state = {
       movie: {},
       video: {},
-      isMovieDisplayed: true
+      isMovieDisplayed: true,
     };
   }
 
@@ -62,7 +62,7 @@ class Movie extends Component {
 
     return (
       <>
-        <Nav isMovieDisplayed={this.isMovieDisplayed}/>
+        <Nav isMovieDisplayed={this.isMovieDisplayed} />
         <section className="individual-movie-container">
           <div className="rating-container">
             <h2 className="individual-title">{title}</h2>
@@ -82,8 +82,6 @@ class Movie extends Component {
                 title="Embedded YouTube Video"
                 width="750"
                 height="438.46"
-                // allow="fullscreen; autoplay"
-                // scrolling="no"
                 src={`https://www.youtube.com/embed/${this.state.video.key}`}
                 frameBorder="0"
                 allowFullScreen
@@ -95,26 +93,31 @@ class Movie extends Component {
             <div className="details-container">
               <h4>DETAILS </h4>
               <div>
-                <p><span>Released </span>
+                <p>
+                  <span>Released </span>
                   {dayjs(release_date).format('MMMM D, YYYY')}
                 </p>
                 {genres !== undefined && (
-                  <p><span>Genre </span>
+                  <p>
+                    <span>Genre </span>
                     {genres.join(', ')}
                   </p>
                 )}
                 {runtime > 0 && (
-                  <p><span>Runtime </span>
+                  <p>
+                    <span>Runtime </span>
                     {this.formatRuntime(runtime)}
                   </p>
                 )}
                 {budget > 0 && (
-                  <p><span>Budget </span>
+                  <p>
+                    <span>Budget </span>
                     {formatter.format(budget)}
                   </p>
                 )}
                 {revenue > 0 && (
-                  <p><span>Revenue </span>
+                  <p>
+                    <span>Revenue </span>
                     {formatter.format(revenue)}
                   </p>
                 )}
@@ -125,7 +128,7 @@ class Movie extends Component {
               <p className="overview">{overview}</p>
             </div>
           </section>
-          <img 
+          <img
             className="individual-movie-image"
             src={backdrop_path}
             alt={`${title} movie poster`}

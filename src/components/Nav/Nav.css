@@ -54,7 +54,6 @@
 }
 
 .all-movies-btn {
-  /* margin: 15px; */
   margin: -10px 15px 20px 15px;
   background: transparent;
   color: #b1ec63;
@@ -84,7 +83,6 @@
   top: 0;
   width: 70%;
 }
-
 
 .movie-view-header {
   height: 15vh;
