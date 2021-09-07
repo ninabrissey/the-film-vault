@@ -8,7 +8,7 @@ const Nav = ({movieObj}) => {
   return (
     <header>
       <div className='image-overlay'/>
-      {movieObj && <img className='header-image' src={movieObj.backdrop_path} />}
+      {movieObj && <img className='header-image' src={movieObj.backdrop_path} alt={`${movieObj.title} backdrop`} />}
       <img className='party-title' src={partyTitle} alt='the good, the bad and the mediocre header' />
         <div className='nav-navigation'>
           <Link to="/">
