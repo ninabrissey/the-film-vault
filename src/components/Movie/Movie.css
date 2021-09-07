@@ -7,23 +7,11 @@
   padding-bottom: 10vh;
 }
 
-.individual-movie-poster {
-  height: 438.46px;
-  width: auto;
-  border-radius: 3px;
-}
-
-.details1-container,
-.details2-container,
-.details3-container {
-  width: 100%;
-}
-
-.details1-container {
+.rating-container {
   display: flex;
   justify-content: space-between;
-  margin: 2%;
-  width: 70%;
+  margin: 5vh 1vw;
+  width: 73vw;
 }
 
 .individual-title {
@@ -36,25 +24,44 @@
   color: #b1ec63;
 }
 
-.details2-container {
+/* .rating-container,
+.media-container,
+.details-wrapper{
+  width: 100%;
+} */
+
+.media-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 80vw;
 }
 
-.details3-container {
-  width: 75%;
+.individual-movie-poster {
+  height: 438.46px;
+  width: auto;
+  border-radius: 3px;
+}
+
+
+.details-wrapper{
+  width: 75vw;
+  margin: 5vh 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 1%;
 }
 
-.overview {
-  line-height: 1.4;
+.tagline {
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+  margin: 5vh 1vw;
 }
 
-.details4-container {
+.details-container {
   width: 45%;
   margin-bottom: 5%;
   display: flex;
@@ -62,20 +69,25 @@
   justify-content: space-between;
 }
 
+.details-container > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  width: 90%;
+}
+
 p {
-  margin: 1%;
+  padding: 5px 0;
+  margin: 5px;
   font-size: 1.5em;
+  border-bottom: 1px solid grey;
 }
 
 span {
-  font-style: oblique;
+  font-weight: 800;
   font-size: 1em;
-}
-
-.tagline {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
+  color: #ffffff7a;
 }
 
 .overview-container {
@@ -83,13 +95,25 @@ span {
   width: 45%;
 }
 
-/* .trailer-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
+.details-container > h4,
+.overview-container > h4 {
+  color: #b1ec63; 
+  font-size: 2em;
+  padding-bottom: 20px;
 }
 
-.trailer {
+.overview {
+  line-height: 1.4;
+}
+
+.trailer-container {
+  width: 67%;
+  /* position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; */
+}
+
+/* .trailer {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,7 +123,9 @@ span {
 } */
 
 
+
 .individual-movie-image {
   height: auto;
-  width: 80vw;
+  width: 75vw;
+  margin: 10vh 0;
 }
