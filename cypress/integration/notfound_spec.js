@@ -7,6 +7,8 @@ describe('The Film Vault Not Found 404 Error Page', () => {
       .contains('Oops...')
       .get('p')
       .eq(1)
-      .contains('Seems we cannot find the page you requested');
+      .contains('Seems we cannot find the page you requested')
+      .get('img')
+      .should('have.class', 'not-found-logo');
   });
 });
