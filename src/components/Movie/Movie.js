@@ -1,8 +1,12 @@
-import React, { Component, Link } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav';
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
+
 import './Movie.css';
+import logo from '../../logo.png';
+
 import dayjs from 'dayjs';
 var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -45,6 +49,7 @@ class Movie extends Component {
       title,
       poster_path,
       release_date,
+      backdrop_path,
       overview,
       genres,
       budget,
@@ -55,7 +60,7 @@ class Movie extends Component {
     } = this.state.movie;
 
     return (
-      <>
+      <div>
         <Nav />
         <section className="individual-movie-container">
           <div className="details1-container">
@@ -123,8 +128,22 @@ class Movie extends Component {
               </p>
             </div>
           </div>
+          <img 
+            className="individual-movie-image"
+            src={backdrop_path}
+            alt={`${title} movie poster`}
+          />
         </section>
-      </>
+        <footer>
+          <Link to="/">
+            <img
+              className="logo"
+              src={logo}
+              alt="the film vault logo and link to go to main page"
+            />
+          </Link>
+        </footer>
+      </div>
     );
   }
 }
