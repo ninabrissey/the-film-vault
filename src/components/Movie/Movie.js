@@ -84,14 +84,42 @@ class Movie extends Component {
               />
             </div>
           </div>
+          <p className="tagline">{tagline}</p>
           <div className="details3-container">
-            <p className="tagline">{tagline}</p>
-            <p>Overview: {overview}</p>
-            <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
-            {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
-            {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
-            {budget > 0 && <p>Budget: {formatter.format(budget)}</p>}
-            {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
+            <p className="overview">
+              <span className="overview">OVERVIEW </span>
+              {overview}
+            </p>
+            <div className="details4-container">
+              <p>
+                <span>RELEASE DATE </span>
+                {dayjs(release_date).format('MMMM D, YYYY')}
+              </p>
+              {genres !== undefined && (
+                <p>
+                  <span>GENRES </span>
+                  {genres.join(', ')}
+                </p>
+              )}
+              {runtime > 0 && (
+                <p>
+                  <span>RUNTIME </span>
+                  {this.formatRuntime(runtime)}
+                </p>
+              )}
+              {budget > 0 && (
+                <p>
+                  <span>BUDGET </span>
+                  {formatter.format(budget)}
+                </p>
+              )}
+              {revenue > 0 && (
+                <p>
+                  <span>REVENUE </span>
+                  {formatter.format(revenue)}
+                </p>
+              )}
+            </div>
           </div>
         </section>
       </>
