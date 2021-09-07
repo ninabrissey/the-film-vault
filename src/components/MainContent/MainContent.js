@@ -8,7 +8,6 @@ import fetchData from '../../apiCalls';
 import './MainContent.css';
 import logo from '../../logo.png';
 
-
 class MainContent extends Component {
   constructor() {
     super();
@@ -43,15 +42,15 @@ class MainContent extends Component {
   getRandomHeaderImage = () => {
     if (this.state.movies) {
       const randomIndex = Math.floor(Math.random() * this.state.movies.length);
-      const randomMovie = this.state.movies[randomIndex]
-      return randomMovie
+      const randomMovie = this.state.movies[randomIndex];
+      return randomMovie;
     }
-  }
+  };
 
   render() {
     return (
       <>
-        <Nav movieObj={this.getRandomHeaderImage()}/>
+        <Nav movieObj={this.getRandomHeaderImage()} />
         <main>
           {this.state.error && <p>{this.state.error}</p>}
           {this.state.movies.length > 0 && (
@@ -64,14 +63,20 @@ class MainContent extends Component {
           <FilmsContainer movies={this.state.filteredMovies} />
         </main>
         <footer>
-        <Link to="/" onClick={() => {window.location.reload()}}>
-          <img
-            className="logo"
-            src={logo}
-            alt="the film vault logo and link to go to main page"
-          />
-        </Link>
-      </footer>
+          <Link
+            to="/"
+            onClick={() => {
+              window.location.reload();
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img
+              className="logo"
+              src={logo}
+              alt="the film vault logo and link to go to main page"
+            />
+          </Link>
+        </footer>
       </>
     );
   }
