@@ -1,6 +1,7 @@
 .individual-movie-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 90vw;
   height: 100%;
 }
@@ -21,7 +22,17 @@
   display: flex;
   justify-content: space-between;
   margin: 2%;
-  width: 50%;
+  width: 70%;
+}
+
+.individual-title {
+  font-size: 3em;
+}
+
+.individual-rating {
+  /* text-align: right; */
+  font-size: 3em;
+  color: #b1ec63;
 }
 
 .details2-container {
@@ -31,13 +42,28 @@
   justify-content: center;
 }
 
-.individual-title {
-  font-size: 2em;
+.details3-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.individual-rating {
-  /* text-align: right; */
-  font-size: 2em;
+.overview {
+  width: 50%;
+}
+
+.details4-container {
+  width: 5%;
+}
+
+p {
+  margin: 1%;
+  font-size: 1.5em;
+}
+
+span {
+  font-style: oblique;
+  font-size: 1em;
 }
 
 .tagline {
