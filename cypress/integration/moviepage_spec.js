@@ -1,5 +1,6 @@
 beforeEach(() => {
   cy.visit('http://localhost:3000/movies/694919');
+  cy.fetchMovie('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2');
 });
 
 describe('The Film Vault Movie Page', () => {
@@ -16,17 +17,17 @@ describe('The Film Vault Movie Page', () => {
       .should('have.attr', 'title')
       .get('p')
       .eq(1)
-      .contains(
-        "A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
-      )
-      .get('p')
-      .eq(2)
       .contains('September 29, 2020')
       .get('p')
-      .eq(3)
+      .eq(2)
       .contains('Action')
       .get('p')
+      .eq(3)
+      .contains('1hr 22min')
+      .get('p')
       .eq(4)
-      .contains('1hr 22min');
+      .contains(
+        "OVERVIEW A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
+      );
   });
 });
