@@ -1,10 +1,11 @@
 beforeEach(() => {
   cy.visit('http://localhost:3000/');
+  cy.fetchAllMovies('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2');
 });
 
 describe('The Film Vault Main Page', () => {
   it('should be able to click all elements in Nav', () => {
-    cy.get('button').contains('All Movies');
+    cy.get('button').contains('HOME');
     cy.get('header>a>img').click();
   });
 
