@@ -1,5 +1,4 @@
 import { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -16,13 +15,17 @@ class SearchBar extends Component {
   };
 
   clearSearchInput = () => {
-    this.setState({searchInput: ''})
+    this.setState({ searchInput: '' });
     this.props.clearFilteredMovies();
-  }
+  };
 
   render() {
     return (
-      <form onSubmit={((e) => {e.preventDefault()})}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <input
           className="search-bar"
           aria-label="search bar"
@@ -32,7 +35,11 @@ class SearchBar extends Component {
           onChange={this.handleChange}
           autoComplete="off"
         />
-        <button className='clear-btn' type='submit' onClick={this.clearSearchInput}>
+        <button
+          className="clear-btn"
+          type="submit"
+          onClick={this.clearSearchInput}
+        >
           clear
         </button>
       </form>
