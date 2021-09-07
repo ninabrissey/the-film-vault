@@ -9,7 +9,6 @@ const App = () => {
     <div className="app">
       <Switch>
         <Route exact path="/" render={() => <MainContent />} />
-        {/* <Route exact path="/search" render={() => <MainContent />} /> */}
         <Route
           exact
           path="/movies/:movieID"
