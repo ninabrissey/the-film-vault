@@ -52,13 +52,13 @@ header {
   /* margin: 15px; */
   margin: -10px 15px 20px 15px;
   background: transparent;
-  color: #59b959;
+  color: #b1ec63;
   font-size: 1.25em;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
   padding: 5px;
-  border-bottom: 1px solid #59b959;
+  border-bottom: 1px solid #b1ec63;
 }
 
 .all-movies-btn:hover,

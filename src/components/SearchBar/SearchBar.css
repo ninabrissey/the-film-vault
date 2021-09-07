@@ -20,7 +20,8 @@ form {
 }
 
 ::placeholder {
-  color: #74c561;
+  /* color: #59b959; */
+  color: #b1ec63;
 }
 
 .clear-btn {
@@ -34,5 +35,5 @@ form {
 }
 
 .clear-btn:hover {
-  color: #59b959;
+  color: #b1ec63;
 }

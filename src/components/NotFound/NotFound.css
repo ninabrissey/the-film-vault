@@ -1,0 +1,36 @@
+.not-found {
+  background-color: #1d1d1d;
+  color: rgb(206, 206, 206);
+  text-align: center;
+  padding-top: 5vh;
+  height: 95vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found-text {
+  font-size: 1.5em;
+  padding: 5px;
+  font-weight: 700;
+  z-index: 10;
+  width: 50vw;
+}
+
+.return-home {
+  font-size: 1.5em;
+}
+
+.return-home-link {
+  color: inherit; 
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.return-home-link:hover {
+  cursor: pointer;
+  color: #b1ec63;
+}
