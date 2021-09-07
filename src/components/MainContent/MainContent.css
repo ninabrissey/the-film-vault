@@ -4,11 +4,14 @@ main {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 10vh;
 }
 
-/* 
-.party-title {
-  height: 30vh;
-  width: auto;
-  margin-left: -220px;
-} */
+
+footer {
+  width: 97%;
+  border-top: 2px solid #00000040;
+  display: flex;
+  justify-content: center;
+  padding: 10vh 0;
+}

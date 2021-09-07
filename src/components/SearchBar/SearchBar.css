@@ -12,12 +12,16 @@ form {
   border: none;
   font-size: 2em;
   color: white;
+  outline: transparent;
+}
 
-  outline: none;
+.search-bar:focus {
+  outline: thick double grey;
 }
 
 ::placeholder {
-  color: #74c561;
+  /* color: #59b959; */
+  color: #b1ec63;
 }
 
 .clear-btn {
@@ -27,8 +31,9 @@ form {
   color: white;
   font-size: 1.25em;
   cursor: pointer;
+  padding-left: 15px;
 }
 
 .clear-btn:hover {
-  color: #59b959;
+  color: #b1ec63;
 }
