@@ -15,7 +15,6 @@ const Nav = ({movieObj}) => {
       <div className='nav-navigation'>
         <Link to="/">
           <img
-            // onClick={() => {window.location.reload()}}
             className="logo"
             src={logo}
             alt="the film vault logo and link to go to main page"
