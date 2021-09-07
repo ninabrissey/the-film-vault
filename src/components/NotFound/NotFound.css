@@ -15,19 +15,22 @@
   font-size: 1.5em;
   padding: 5px;
   font-weight: 700;
-
-  /* position: absolute; */
   z-index: 10;
   width: 50vw;
 }
 
-/* .not-found-logo {
-  position: absolute;
-  top: 32vh;
-  left: 48vw;
-  z-index: 1;
-} */
-
 .return-home {
   font-size: 1.5em;
+}
+
+.return-home-link {
+  color: inherit; 
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.return-home-link:hover {
+  cursor: pointer;
+  color: #b1ec63;
 }
