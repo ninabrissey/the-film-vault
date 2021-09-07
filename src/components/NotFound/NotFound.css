@@ -1,0 +1,13 @@
+.not-found {
+  background-color: #1d1d1d;
+  color: rgb(206, 206, 206);
+  text-align: center;
+  padding-top: 5vh;
+  height: 95vh;
+}
+
+.not-found-text {
+  font-size: 1.5em;
+  padding: 5px;
+  font-weight: 700;
+}
