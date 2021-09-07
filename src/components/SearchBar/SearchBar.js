@@ -23,22 +23,18 @@ class SearchBar extends Component {
   render() {
     return (
       <form onSubmit={((e) => {e.preventDefault()})}>
-        {/* <Link to="/search"> */}
-          <input
-            className="search-bar"
-            aria-label="search bar"
-            placeholder="Search..."
-            name="searchInput"
-            value={this.state.searchInput}
-            onChange={this.handleChange}
-            autoComplete="off"
-          />
-        {/* </Link> */}
-        {/* <Link to="/"> */}
-          <button className='clear-btn' type='submit' onClick={this.clearSearchInput}>
-            clear
-          </button>
-        {/* </Link> */}
+        <input
+          className="search-bar"
+          aria-label="search bar"
+          placeholder="Search..."
+          name="searchInput"
+          value={this.state.searchInput}
+          onChange={this.handleChange}
+          autoComplete="off"
+        />
+        <button className='clear-btn' type='submit' onClick={this.clearSearchInput}>
+          clear
+        </button>
       </form>
     );
   }
