@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -12,28 +12,33 @@ class SearchBar extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    this.props.filterMovies(this.state.searchInput.toLowerCase());
+    this.props.filterMovies(e.target.value.toLowerCase());
   };
+
+  clearSearchInput = () => {
+    this.setState({searchInput: ''})
+    this.props.clearFilteredMovies();
+  }
 
   render() {
     return (
-      <form>
-        <Link to="/search">
+      <form onSubmit={((e) => {e.preventDefault()})}>
+        {/* <Link to="/search"> */}
           <input
             className="search-bar"
             aria-label="search bar"
-            placeholder="Search"
+            placeholder="Search..."
             name="searchInput"
             value={this.state.searchInput}
-            onChange={(e) => this.handleChange(e)}
+            onChange={this.handleChange}
             autoComplete="off"
           />
-        </Link>
-        <Link to="/">
-          <button onClick={() => this.props.clearFilteredMovies()}>
+        {/* </Link> */}
+        {/* <Link to="/"> */}
+          <button type='submit' onClick={this.clearSearchInput}>
             clear
           </button>
-        </Link>
+        {/* </Link> */}
       </form>
     );
   }
