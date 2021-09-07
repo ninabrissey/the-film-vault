@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './NotFound.css';
 import notFoundLogo from '../../notFoundLogo.png';
 
@@ -9,7 +10,11 @@ const NotFound = () => {
         <p>Seems we cannot find the page you requested</p>
       </div>
       <img className='not-found-logo' src={notFoundLogo} alt='the film vault logo' />
-      <p className='return-home'>Click <a href='localhost:3000/'>HERE</a> to go back to the Film Vault</p>
+      <p 
+      className='return-home'>Click 
+      <Link to='/'>HERE</Link> 
+      to go back to the Film Vault
+      </p>
     </div>
   )
 }
