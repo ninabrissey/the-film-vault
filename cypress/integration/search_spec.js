@@ -10,5 +10,12 @@ describe('The Film Vault Seeach Feature', () => {
       .get('h3')
       .eq(0)
       .contains('Ava');
+
+    cy.get('input[name="searchInput"]')
+      .clear('input')
+      .type('mo')
+      .get('h3')
+      .eq(0)
+      .contains('Money Plane');
   });
 });
