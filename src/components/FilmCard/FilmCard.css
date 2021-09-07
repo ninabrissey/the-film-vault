@@ -4,12 +4,18 @@
 }
 
 .film-card {
+  width: 20vw;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .movie-poster {
-  height: 55vh;
-  width: auto;
+  /* height: 50vh;
+  width: auto; */
+  height: auto;
+  width: 20vw;
   border-radius: 3px;
   transition: all .2s ease-in-out;
   box-shadow:
@@ -26,12 +32,13 @@
 
 .movie-info {
   height: 10vh;
-  width: 19vw;
-  padding: 3px;
+  width: 100%;
+  /* padding: 3px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: space-between;
 }
 
 section {
@@ -40,13 +47,21 @@ section {
 
 h3 {
   word-break: break-word;
+  font-size: 1.25em;
+  width: 75%;
+  height: 33%;
+  /* padding-bottom: 10px; */
+  padding: 5px;
+}
+
+p {
   font-size: 1.1em;
-  width: 85%;
-  height: 50%;
+  padding: 5px;
 }
 
 h4 {
   color: #59b959;
   font-size: 1.75em;
   height: 5vh;
+  padding: 5px;
 }
