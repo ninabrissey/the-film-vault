@@ -31,18 +31,18 @@
   justify-content: space-evenly;
 }
 
-section {
+/* section {
   display: flex;
-}
+} */
 
-h3 {
+.movie-title {
   word-break: break-word;
   font-size: 1.1em;
   width: 85%;
   height: 50%;
 }
 
-h4 {
+.movie-release-date {
   color: #59b959;
   font-size: 1.75em;
   height: 5vh;
