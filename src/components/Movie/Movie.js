@@ -57,7 +57,7 @@ class Movie extends Component {
     return (
       <>
         <Nav />
-        <section className="individual-movie-details">
+        <section className="individual-movie-container">
           <div className="details1-container">
             <h2 className="individual-title">{title}</h2>
             <h3 className="individual-rating">
@@ -70,17 +70,19 @@ class Movie extends Component {
               src={poster_path}
               alt={`${title} movie poster`}
             />
-            <iframe
-              className="trailer"
-              title="Embedded YouTube Video"
-              width="650"
-              height="380"
-              // allow="fullscreen; autoplay"
-              // scrolling="no"
-              src={`https://www.youtube.com/embed/${this.state.video.key}`}
-              frameBorder="0"
-              allowFullScreen
-            />
+            <div className="trailer-container">
+              <iframe
+                className="trailer"
+                title="Embedded YouTube Video"
+                width="750"
+                height="438.46"
+                // allow="fullscreen; autoplay"
+                // scrolling="no"
+                src={`https://www.youtube.com/embed/${this.state.video.key}`}
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
           </div>
           <div className="details3-container">
             <p>{tagline}</p>
