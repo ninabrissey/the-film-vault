@@ -3,13 +3,18 @@ import logo from '../../logo.png';
 import partyTitle from '../../party-title.png'
 import './Nav.css';
 
-const Nav = ({movieObj}) => {
+const Nav = ({movieObj, isMovieDisplayed}) => {
 
   return (
-    <header>
-      <div className='image-overlay'/>
+    <header className='all-movies-header'>
+
+    {isMovieDisplayed && 
+      <header className='movie-view-header' />}
+
+      {movieObj && <div className='image-overlay'/>}
       {movieObj && <img className='header-image' src={movieObj.backdrop_path} alt={`${movieObj.title} backdrop`} />}
-      <img className='party-title' src={partyTitle} alt='the good, the bad and the mediocre header' />
+      {movieObj && <img className='party-title' src={partyTitle} alt='the good, the bad and the mediocre header' />}
+
         <div className='nav-navigation'>
           <Link to="/">
             <img
