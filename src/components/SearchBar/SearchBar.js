@@ -35,7 +35,7 @@ class SearchBar extends Component {
           />
         {/* </Link> */}
         {/* <Link to="/"> */}
-          <button type='submit' onClick={this.clearSearchInput}>
+          <button className='clear-btn' type='submit' onClick={this.clearSearchInput}>
             clear
           </button>
         {/* </Link> */}
