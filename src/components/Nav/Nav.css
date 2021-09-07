@@ -9,7 +9,7 @@ header {
   align-items: flex-end; */
 }
 
-.header-image{
+.header-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,11 @@ header {
   z-index: 2;
   /* background: rgb(0,0,0); */
   /* background: linear-gradient(90deg, rgba(0,0,0,4.78195) 25%, rgba(0,0,0,0.3071) 50%); */
-  background: linear-gradient(90deg, rgb(0 0 0 / 90%) 10%, rgba(0,0,0,0.3071) 70%);
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 90%) 10%,
+    rgba(0, 0, 0, 0.3071) 70%
+  );
 }
 
 .nav-navigation {
@@ -63,21 +67,21 @@ header {
 
 .all-movies-btn:hover,
 .all-movies-btn:active {
-letter-spacing: 5px;
+  letter-spacing: 5px;
 }
 
 .all-movies-btn:hover:after,
 .all-movies-btn:hover:before {
-backface-visibility: hidden;
-border-color: #fff;
-transition: width 350ms ease-in-out;
-width: 70%;
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
 }
 
 .all-movies-btn:hover:before {
-bottom: auto;
-top: 0;
-width: 70%;
+  bottom: auto;
+  top: 0;
+  width: 70%;
 }
 
 .party-title {
@@ -86,4 +90,12 @@ width: 70%;
   margin-left: 10px;
   margin-top: 25vh;
   z-index: 9;
+}
+
+.movie-view-header {
+  height: 15vh;
+}
+
+.overlay-movie-view-header {
+  height: 15vh;
 }

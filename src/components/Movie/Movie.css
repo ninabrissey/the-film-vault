@@ -1,7 +1,98 @@
-.movie-details {
+.individual-movie-container {
   display: flex;
   flex-direction: column;
-  width: 80vw;
-
-  margin-top: 15vh;
+  align-items: center;
+  width: 90vw;
+  height: 100%;
 }
+
+.individual-movie-poster {
+  height: 438.46px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.details1-container,
+.details2-container,
+.details3-container {
+  width: 100%;
+}
+
+.details1-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  width: 70%;
+}
+
+.individual-title {
+  font-size: 3em;
+}
+
+.individual-rating {
+  /* text-align: right; */
+  font-size: 3em;
+  color: #b1ec63;
+}
+
+.details2-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.details3-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
+
+.overview {
+  line-height: 1.4;
+}
+
+.details4-container {
+  width: 45%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  margin: 1%;
+  font-size: 1.5em;
+}
+
+span {
+  font-style: oblique;
+  font-size: 1em;
+}
+
+.tagline {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.overview-container {
+  /* border: 3px solid #b1ec63; */
+  width: 45%;
+}
+
+/* .trailer-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.trailer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+} */

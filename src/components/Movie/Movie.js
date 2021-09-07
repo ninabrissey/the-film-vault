@@ -57,10 +57,12 @@ class Movie extends Component {
     return (
       <>
         <Nav />
-        <section className="movie-details">
+        <section className="individual-movie-container">
           <div className="details1-container">
-            <h2>{title}</h2>
-            <h3>{average_rating && Math.round(average_rating * 10) / 10}</h3>
+            <h2 className="individual-title">{title}</h2>
+            <h3 className="individual-rating">
+              {average_rating && Math.round(average_rating * 10) / 10}
+            </h3>
           </div>
           <div className="details2-container">
             <img
@@ -68,23 +70,58 @@ class Movie extends Component {
               src={poster_path}
               alt={`${title} movie poster`}
             />
-            <iframe
-              title="Embedded YouTube Video"
-              width="650"
-              height="380"
-              src={`https://www.youtube.com/embed/${this.state.video.key}`}
-              frameBorder="0"
-              allowFullScreen
-            />
+            <div className="trailer-container">
+              <iframe
+                className="trailer"
+                title="Embedded YouTube Video"
+                width="750"
+                height="438.46"
+                // allow="fullscreen; autoplay"
+                // scrolling="no"
+                src={`https://www.youtube.com/embed/${this.state.video.key}`}
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
           </div>
+          <p className="tagline">{tagline}</p>
           <div className="details3-container">
-            <p>{tagline}</p>
-            <p>Overview: {overview}</p>
-            <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
-            {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
-            {runtime > 0 && <p>Runtime: {this.formatRuntime(runtime)}</p>}
-            {budget > 0 && <p>Budget: {formatter.format(budget)}</p>}
-            {revenue > 0 && <p>Revenue: {formatter.format(revenue)}</p>}
+            <div className="details4-container">
+              <p>
+                <span>RELEASE DATE </span>
+                {dayjs(release_date).format('MMMM D, YYYY')}
+              </p>
+              {genres !== undefined && (
+                <p>
+                  <span>GENRES </span>
+                  {genres.join(', ')}
+                </p>
+              )}
+              {runtime > 0 && (
+                <p>
+                  <span>RUNTIME </span>
+                  {this.formatRuntime(runtime)}
+                </p>
+              )}
+              {budget > 0 && (
+                <p>
+                  <span>BUDGET </span>
+                  {formatter.format(budget)}
+                </p>
+              )}
+              {revenue > 0 && (
+                <p>
+                  <span>REVENUE </span>
+                  {formatter.format(revenue)}
+                </p>
+              )}
+            </div>
+            <div className="overview-container">
+              <p className="overview">
+                <span className="overview">OVERVIEW </span>
+                {overview}
+              </p>
+            </div>
           </div>
         </section>
       </>

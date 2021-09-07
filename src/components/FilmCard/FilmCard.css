@@ -17,13 +17,10 @@
   height: auto;
   width: 20vw;
   border-radius: 3px;
-  transition: all .2s ease-in-out;
-  box-shadow:
-    0 4.7px 13px rgb(123 123 123 / 30%), 
-    0 11.4px 23.8px rgb(27 27 27 / 42%), 
-    0 21.4px 38.2px rgb(0 0 0 / 17%), 
-    0 38.1px 77.1px rgb(27 27 27 / 2%), 
-    0 75px 268px rgb(29 29 29 / 63%);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4.7px 13px rgb(123 123 123 / 30%),
+    0 11.4px 23.8px rgb(27 27 27 / 42%), 0 21.4px 38.2px rgb(0 0 0 / 17%),
+    0 38.1px 77.1px rgb(27 27 27 / 2%), 0 75px 268px rgb(29 29 29 / 63%);
 }
 
 .movie-poster:hover {
@@ -41,11 +38,11 @@
   align-content: space-between;
 }
 
-section {
+/* section {
   display: flex;
-}
+} */
 
-h3 {
+.movie-title {
   word-break: break-word;
   font-size: 1.25em;
   width: 75%;
@@ -59,9 +56,10 @@ p {
   padding: 5px;
 }
 
-h4 {
+.movie-release-date {
   color: #59b959;
   font-size: 1.75em;
   height: 5vh;
   padding: 5px;
-}
+} 
+
