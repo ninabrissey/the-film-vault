@@ -63,16 +63,13 @@ class Movie extends Component {
     return (
       <>
         <Nav isMovieDisplayed={this.isMovieDisplayed}/>
-
         <section className="individual-movie-container">
-
           <div className="rating-container">
             <h2 className="individual-title">{title}</h2>
             <h3 className="individual-rating">
               {average_rating && Math.round(average_rating * 10) / 10}
             </h3>
           </div>
-
           <div className="media-container">
             <img
               className="individual-movie-poster"
@@ -93,10 +90,8 @@ class Movie extends Component {
               />
             </div>
           </div>
-
           <section className="details-wrapper">
             <p className="tagline">{tagline}</p>
-
             <div className="details-container">
               <h4>DETAILS </h4>
               <div>
@@ -125,24 +120,17 @@ class Movie extends Component {
                 )}
               </div>
             </div>
-
             <div className="overview-container">
               <h4>OVERVIEW </h4>
-              <p className="overview">
-                {/* <span className="overview">OVERVIEW </span> */}
-                {overview}
-              </p>
+              <p className="overview">{overview}</p>
             </div>
-
           </section>
-
           <img 
             className="individual-movie-image"
             src={backdrop_path}
             alt={`${title} movie poster`}
           />
         </section>
-
         <footer>
           <Link to="/">
             <img
