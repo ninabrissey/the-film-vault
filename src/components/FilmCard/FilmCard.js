@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './FilmCard.css';
-var dayjs = require('dayjs');
+import dayjs from 'dayjs';
 
 const FilmCard = ({ movie }) => {
   return (
@@ -18,7 +18,7 @@ const FilmCard = ({ movie }) => {
         <p className="movie-release-date">
           {dayjs(movie.release_date).format('YYYY')}
         </p>
-        <h4>{Math.round(movie.average_rating * 10) / 10}</h4>
+        <h4 className='movie-rating'>{Math.round(movie.average_rating * 10) / 10}</h4>
       </div>
     </article>
   );

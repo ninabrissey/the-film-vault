@@ -1,8 +1,12 @@
-import React, { Component, Link } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav';
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
+
 import './Movie.css';
+import logo from '../../logo.png';
+
 import dayjs from 'dayjs';
 var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -16,6 +20,7 @@ class Movie extends Component {
     this.state = {
       movie: {},
       video: {},
+      isMovieDisplayed: true
     };
   }
 
@@ -45,6 +50,7 @@ class Movie extends Component {
       title,
       poster_path,
       release_date,
+      backdrop_path,
       overview,
       genres,
       budget,
@@ -56,15 +62,15 @@ class Movie extends Component {
 
     return (
       <>
-        <Nav />
+        <Nav isMovieDisplayed={this.isMovieDisplayed}/>
         <section className="individual-movie-container">
-          <div className="details1-container">
+          <div className="rating-container">
             <h2 className="individual-title">{title}</h2>
             <h3 className="individual-rating">
               {average_rating && Math.round(average_rating * 10) / 10}
             </h3>
           </div>
-          <div className="details2-container">
+          <div className="media-container">
             <img
               className="individual-movie-poster"
               src={poster_path}
@@ -84,46 +90,56 @@ class Movie extends Component {
               />
             </div>
           </div>
-          <p className="tagline">{tagline}</p>
-          <div className="details3-container">
-            <div className="details4-container">
-              <p>
-                <span>RELEASE DATE </span>
-                {dayjs(release_date).format('MMMM D, YYYY')}
-              </p>
-              {genres !== undefined && (
-                <p>
-                  <span>GENRES </span>
-                  {genres.join(', ')}
+          <section className="details-wrapper">
+            <p className="tagline">{tagline}</p>
+            <div className="details-container">
+              <h4>DETAILS </h4>
+              <div>
+                <p><span>Released </span>
+                  {dayjs(release_date).format('MMMM D, YYYY')}
                 </p>
-              )}
-              {runtime > 0 && (
-                <p>
-                  <span>RUNTIME </span>
-                  {this.formatRuntime(runtime)}
-                </p>
-              )}
-              {budget > 0 && (
-                <p>
-                  <span>BUDGET </span>
-                  {formatter.format(budget)}
-                </p>
-              )}
-              {revenue > 0 && (
-                <p>
-                  <span>REVENUE </span>
-                  {formatter.format(revenue)}
-                </p>
-              )}
+                {genres !== undefined && (
+                  <p><span>Genre </span>
+                    {genres.join(', ')}
+                  </p>
+                )}
+                {runtime > 0 && (
+                  <p><span>Runtime </span>
+                    {this.formatRuntime(runtime)}
+                  </p>
+                )}
+                {budget > 0 && (
+                  <p><span>Budget </span>
+                    {formatter.format(budget)}
+                  </p>
+                )}
+                {revenue > 0 && (
+                  <p><span>Revenue </span>
+                    {formatter.format(revenue)}
+                  </p>
+                )}
+              </div>
             </div>
             <div className="overview-container">
-              <p className="overview">
-                <span className="overview">OVERVIEW </span>
-                {overview}
-              </p>
+              <h4>OVERVIEW </h4>
+              <p className="overview">{overview}</p>
             </div>
-          </div>
+          </section>
+          <img 
+            className="individual-movie-image"
+            src={backdrop_path}
+            alt={`${title} movie poster`}
+          />
         </section>
+        <footer>
+          <Link to="/">
+            <img
+              className="logo"
+              src={logo}
+              alt="the film vault logo and link to go to main page"
+            />
+          </Link>
+        </footer>
       </>
     );
   }
