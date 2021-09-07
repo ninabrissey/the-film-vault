@@ -45,15 +45,20 @@
 .details3-container {
   width: 75%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-top: 1%;
 }
 
 .overview {
-  width: 50%;
+  line-height: 1.4;
 }
 
 .details4-container {
-  width: 5%;
+  width: 45%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 p {
@@ -70,6 +75,11 @@ span {
   text-align: center;
   font-weight: 700;
   font-size: 2em;
+}
+
+.overview-container {
+  /* border: 3px solid #b1ec63; */
+  width: 45%;
 }
 
 /* .trailer-container {
