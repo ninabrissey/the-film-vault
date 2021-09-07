@@ -85,7 +85,7 @@ class Movie extends Component {
             </div>
           </div>
           <div className="details3-container">
-            <p>{tagline}</p>
+            <p className="tagline">{tagline}</p>
             <p>Overview: {overview}</p>
             <p>Release Date: {dayjs(release_date).format('MMMM D, YYYY')}</p>
             {genres !== undefined && <p>Genres: {genres.join(', ')}</p>}
