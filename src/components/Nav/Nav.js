@@ -9,6 +9,7 @@ const Nav = ({movieObj}) => {
     <header>
       <div className='image-overlay'/>
       {movieObj && <img className='header-image' src={movieObj.backdrop_path} />}
+      <img className='party-title' src={partyTitle} alt='the good, the bad and the mediocre header' />
         <div className='nav-navigation'>
           <Link to="/">
             <img
@@ -24,14 +25,8 @@ const Nav = ({movieObj}) => {
             className="all-movies-btn">Home</button>
           </NavLink>
         </div>
-        <img className='party-title' src={partyTitle} alt='the good, the bad and the mediocre header' />
-      
     </header>
   );
 };
 
 export default Nav;
-
-
-
-// #020606  color for behind logo
