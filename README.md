@@ -49,7 +49,8 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 
 
 ### Preview
-
+![thv1](https://user-images.githubusercontent.com/76507607/132333700-5dfaf73c-5df1-4372-b4ea-e03ddbf02d1c.gif)
+![thv2](https://user-images.githubusercontent.com/76507607/132333713-7461cc5c-5d56-45e2-b6f0-a649f9bbe2eb.gif)
 
 
 [Return to top](#the-film-vault)
