@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './FilmCard.css';
-var dayjs = require('dayjs');
+import dayjs from 'dayjs';
 
 const FilmCard = ({ movie }) => {
   return (
