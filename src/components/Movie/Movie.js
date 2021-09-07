@@ -1,6 +1,5 @@
 import React, { Component, Link } from 'react';
 import Nav from '../Nav/Nav';
-
 import fetchData from '../../apiCalls';
 import PropTypes from 'prop-types';
 import './Movie.css';
@@ -45,7 +44,6 @@ class Movie extends Component {
     const {
       title,
       poster_path,
-      backdrop_path,
       release_date,
       overview,
       genres,
