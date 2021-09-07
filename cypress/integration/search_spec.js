@@ -5,6 +5,10 @@ beforeEach(() => {
 
 describe('The Film Vault Seeach Feature', () => {
   it('should be able to search movies by title', () => {
-    cy.get('input[name="searchInput"]');
+    cy.get('input[name="searchInput"]')
+      .type('Av')
+      .get('h3')
+      .eq(0)
+      .contains('Ava');
   });
 });
