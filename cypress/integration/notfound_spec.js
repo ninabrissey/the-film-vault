@@ -15,7 +15,8 @@ describe('The Film Vault Not Found 404 Error Page', () => {
       .contains('Click')
       .get('a')
       .contains(' here ')
-      .click();
-    // .get('h3')
+      .click()
+      .get('h3')
+      .contains('Money Plane');
   });
 });
