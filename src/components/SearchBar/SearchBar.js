@@ -10,7 +10,7 @@ class SearchBar extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ searchInput: e.target.value });
     this.props.filterMovies(e.target.value.toLowerCase());
   };
 
