@@ -70,7 +70,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 ---
 
 ### Reflection
-Our partnership was solid.  The communication was consistent and the collaboration was professional.  This was both of our first time building an application from scratch using React.  We were able to take our time and work through each piece together to gain a strong understanding of react fundamentals and working with asynchronous JavaScript.  There were many challenges along the way with implementing a new testing framework, Routing paths, importing images, using conditional rendering and JSX.  The wins and the challenges tend to overlap with the dedication to reach our personal goals and more.  &Overall, we worked great together, learned more than we expected and enjoyed the building process together.    
+Our partnership was solid.  The communication was consistent and the collaboration was professional.  This was both of our first time building an application from scratch using React.  We were able to take our time and work through each piece together to gain a strong understanding of react fundamentals and working with asynchronous JavaScript.  There were many challenges along the way with implementing a new testing framework, Routing paths, importing images, using conditional rendering and JSX.  The wins and the challenges tend to overlap with the dedication to reach our personal goals and more.  Overall, we worked great together, learned more than we expected and enjoyed the building process together.    
 <br>
 
 
