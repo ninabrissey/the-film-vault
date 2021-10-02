@@ -1,13 +1,28 @@
 .films-container {
   width: 90vw;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   margin-top: 15vh;
 }
 
+@media screen and (max-width: 1200px) {
+  .films-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-.hidden {
-  display: none;
+@media screen and (max-width: 900px) {
+  .films-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .films-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
