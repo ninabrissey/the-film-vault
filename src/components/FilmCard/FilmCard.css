@@ -36,7 +36,7 @@
 
 .movie-title {
   word-break: break-word;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   width: 100%;
   height: 33%;
   padding: 5px;
@@ -57,4 +57,40 @@
   text-align: right;
   font-size: 1.75em;
   height: 5vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .film-card {
+    width: 30vw;
+  }
+  .movie-poster {
+    width: 30vw;
+  }
+  .movie-title {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .film-card {
+    width: 45vw;
+  }
+  .movie-poster {
+    width: 45vw;
+  }
+  .movie-title {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .film-card {
+    width: 90vw;
+  }
+  .movie-poster {
+    width: 90vw;
+  }
+  .movie-title {
+    font-size: 5vw;
+  }
 }
