@@ -14,13 +14,17 @@ const FilmCard = ({ movie }) => {
         />
       </Link>
       <div className="movie-info">
-        <h3 className="movie-title">{movie.title}</h3>
-        <p className="movie-release-date">
-          {dayjs(movie.release_date).format('YYYY')}
-        </p>
-        <h4 className="movie-rating">
-          {Math.round(movie.average_rating * 10) / 10}
-        </h4>
+        <div className="movie-title-wrapper">
+          <h3 className="movie-title">{movie.title}</h3>
+        </div>
+        <div className="movie-rating-date-container">
+          <h4 className="movie-rating">
+            {Math.round(movie.average_rating * 10) / 10}
+          </h4>
+          <p className="movie-release-date">
+            {dayjs(movie.release_date).format('YYYY')}
+          </p>
+        </div>
       </div>
     </article>
   );

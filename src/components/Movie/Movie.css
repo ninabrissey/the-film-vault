@@ -17,29 +17,31 @@
 }
 
 .individual-title {
-  font-size: 3em;
+  font-size: 4vw;
 }
 
 .individual-rating {
-  font-size: 3em;
+  font-size: 4vw;
   color: #b1ec63;
 }
 
 .media-container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 80vw;
+  margin-bottom: -18%;
 }
 
 .individual-movie-poster {
-  height: 438.46px;
-  width: auto;
+  height: 100%;
+  width: 26.97%;
   border-radius: 3px;
+  margin-bottom: 15.75%;
+  border-radius: 1px;
 }
 
-.details-wrapper{
+.details-wrapper {
   width: 75vw;
   margin: 5vh 0;
   display: flex;
@@ -51,7 +53,7 @@
   text-align: center;
   font-weight: 700;
   font-style: italic;
-  font-size: 2em;
+  font-size: 3vw;
   margin: 5vh 1vw;
 }
 
@@ -74,7 +76,12 @@ p {
   padding: 5px 0;
   margin: 5px;
   font-size: 1.5em;
+}
+
+.line {
   border-bottom: 1px solid grey;
+  width: 350px;
+  margin-top: 5px;
 }
 
 span {
@@ -84,12 +91,16 @@ span {
 }
 
 .overview-container {
-  width: 45%;
+  width: 60%;
+}
+
+.details-container {
+  width: 100%;
 }
 
 .details-container > h4,
 .overview-container > h4 {
-  color: #b1ec63; 
+  color: #b1ec63;
   font-size: 2em;
   padding-bottom: 20px;
 }
@@ -99,11 +110,59 @@ span {
 }
 
 .trailer-container {
-  width: 67%;
+  position: relative;
+  overflow: hidden;
+  width: 72%;
+  padding-top: 56.25%;
+}
+
+.trailer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 72%;
 }
 
 .individual-movie-image {
   height: auto;
   width: 75vw;
   margin: 10vh 0;
+}
+
+@media screen and (max-width: 767px) {
+  .media-container {
+    flex-direction: column;
+    margin-bottom: -10%;
+  }
+  .individual-movie-poster {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .trailer-container {
+    width: 100%;
+  }
+  .trailer {
+    height: 100%;
+  }
+  .individual-title {
+    font-size: 6vw;
+  }
+  .individual-rating {
+    font-size: 6vw;
+  }
+  .overview-container {
+    width: 100%;
+  }
+
+  .line {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 4vw;
+  }
 }
