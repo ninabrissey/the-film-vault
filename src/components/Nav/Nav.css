@@ -91,3 +91,21 @@
 .overlay-movie-view-header {
   height: 15vh;
 }
+
+@media screen and (max-width: 430px) {
+  .all-movies-header {
+    height: 40vh;
+  }
+  .logo {
+    height: 17vh;
+    width: auto;
+  }
+
+  .header-image {
+    height: 50vh;
+  }
+
+  .image-overlay {
+    height: 50vh;
+  }
+}
