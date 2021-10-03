@@ -80,8 +80,6 @@ class Movie extends Component {
               <iframe
                 className="trailer"
                 title="Embedded YouTube Video"
-                width="750"
-                height="438.46"
                 src={`https://www.youtube.com/embed/${this.state.video.key}`}
                 frameBorder="0"
                 allowFullScreen
@@ -92,33 +90,38 @@ class Movie extends Component {
             <p className="tagline">{tagline}</p>
             <div className="details-container">
               <h4>DETAILS </h4>
-              <div>
+              <div className="details">
                 <p>
                   <span>Released </span>
                   {dayjs(release_date).format('MMMM D, YYYY')}
+                  <div className="line"></div>
                 </p>
                 {genres !== undefined && (
                   <p>
                     <span>Genre </span>
                     {genres.join(', ')}
+                    <div className="line"></div>
                   </p>
                 )}
                 {runtime > 0 && (
                   <p>
                     <span>Runtime </span>
                     {this.formatRuntime(runtime)}
+                    <div className="line"></div>
                   </p>
                 )}
                 {budget > 0 && (
                   <p>
                     <span>Budget </span>
                     {formatter.format(budget)}
+                    <div className="line"></div>
                   </p>
                 )}
                 {revenue > 0 && (
                   <p>
                     <span>Revenue </span>
                     {formatter.format(revenue)}
+                    <div className="line"></div>
                   </p>
                 )}
               </div>
