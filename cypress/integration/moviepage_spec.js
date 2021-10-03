@@ -17,7 +17,7 @@ describe('The Film Vault Movie Page', () => {
       .should('have.attr', 'title')
       .get('p')
       .eq(1)
-      .contains('September 29, 2020')
+      .contains('Sep 29, 2020')
       .get('p')
       .eq(2)
       .contains('Action')
@@ -27,7 +27,7 @@ describe('The Film Vault Movie Page', () => {
       .get('p')
       .eq(4)
       .contains(
-        "OVERVIEW A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
+        "A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
       );
   });
 });
