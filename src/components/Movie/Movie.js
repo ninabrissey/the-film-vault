@@ -92,34 +92,34 @@ class Movie extends Component {
               <h4>DETAILS </h4>
               <div className="details">
                 <p>
-                  <span>Released </span>
-                  {dayjs(release_date).format('MMMM D, YYYY')}
+                  <span>Released ∙ </span>
+                  {dayjs(release_date).format('MMM D, YYYY')}
                   <div className="line"></div>
                 </p>
                 {genres !== undefined && (
                   <p>
-                    <span>Genre </span>
+                    <span>Genre ∙ </span>
                     {genres.join(', ')}
                     <div className="line"></div>
                   </p>
                 )}
                 {runtime > 0 && (
                   <p>
-                    <span>Runtime </span>
+                    <span>Runtime ∙ </span>
                     {this.formatRuntime(runtime)}
                     <div className="line"></div>
                   </p>
                 )}
                 {budget > 0 && (
                   <p>
-                    <span>Budget </span>
+                    <span>Budget ∙ </span>
                     {formatter.format(budget)}
                     <div className="line"></div>
                   </p>
                 )}
                 {revenue > 0 && (
                   <p>
-                    <span>Revenue </span>
+                    <span>Revenue ∙ </span>
                     {formatter.format(revenue)}
                     <div className="line"></div>
                   </p>
