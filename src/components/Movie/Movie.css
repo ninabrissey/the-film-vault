@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   width: 80vw;
-  margin-bottom: -15%;
+  margin-bottom: -18%;
 }
 
 .individual-movie-poster {
@@ -81,6 +81,7 @@ p {
 .line {
   border-bottom: 1px solid grey;
   width: 350px;
+  margin-top: 5px;
 }
 
 span {
@@ -134,6 +135,7 @@ span {
 @media screen and (max-width: 767px) {
   .media-container {
     flex-direction: column;
+    margin-bottom: -10%;
   }
   .individual-movie-poster {
     width: 100%;
@@ -150,5 +152,17 @@ span {
   }
   .individual-rating {
     font-size: 6vw;
+  }
+  .overview-container {
+    width: 100%;
+  }
+
+  .line {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 4vw;
   }
 }
