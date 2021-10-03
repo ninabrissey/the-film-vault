@@ -129,13 +129,18 @@ span {
 .individual-movie-image {
   height: auto;
   width: 75vw;
-  margin: 10vh 0;
+  margin: 1vh 0;
 }
 
 @media screen and (max-width: 767px) {
+  .individual-movie-container {
+    margin-top: 18vh;
+    padding: 5vh 0;
+    border-top: none;
+  }
   .media-container {
     flex-direction: column;
-    margin-bottom: -10%;
+    margin-bottom: -3%;
   }
   .individual-movie-poster {
     width: 100%;
@@ -155,6 +160,10 @@ span {
   }
   .overview-container {
     width: 100%;
+  }
+
+  .tagline {
+    font-size: 4vw;
   }
 
   .line {
