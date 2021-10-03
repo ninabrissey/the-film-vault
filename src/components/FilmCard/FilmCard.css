@@ -18,13 +18,15 @@
   width: 20vw;
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 1em;
+  margin-top: 0.75em;
   box-shadow: 0 4.7px 13px rgb(123 123 123 / 30%),
     0 11.4px 23.8px rgb(27 27 27 / 42%), 0 21.4px 38.2px rgb(0 0 0 / 17%),
     0 38.1px 77.1px rgb(27 27 27 / 2%), 0 75px 268px rgb(29 29 29 / 63%);
 }
 
 .movie-poster:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .movie-info {
