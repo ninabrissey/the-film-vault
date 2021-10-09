@@ -7,6 +7,7 @@ import Loading from '../Loading/Loading';
 import fetchData from '../../apiCalls';
 import './MainContent.css';
 import logo from '../../logo.png';
+import backToTopIcon from '../../backToTopIcon.png';
 
 class MainContent extends Component {
   constructor() {
@@ -61,6 +62,21 @@ class MainContent extends Component {
           )}
           {!this.state.movies.length && <Loading />}
           <FilmsContainer movies={this.state.filteredMovies} />
+          <div className="back-to-top-wrapper">
+            <Link
+              to="/"
+              onClick={() => {
+                window.location.reload();
+                window.scrollTo(0, 0);
+              }}
+            >
+              <img
+                className="back-to-top"
+                src={backToTopIcon}
+                alt="back to top of page icon"
+              />
+            </Link>
+          </div>
         </main>
         <footer>
           <Link
