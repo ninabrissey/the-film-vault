@@ -26,7 +26,7 @@ cache:
 
 script:
   # start server in the background
-  - npm run start &
+  - npm start &
   # run all Cypress tests and record on the dashboard
   - npm run cy:run
   # after all tests finish running we need
