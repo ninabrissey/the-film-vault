@@ -1,6 +1,6 @@
 beforeEach(() => {
-  cy.visit('http://localhost:3000/movies/694919');
   cy.fetchMovie('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2');
+  cy.visit('http://localhost:3000/movies/694919');
 });
 
 describe('The Film Vault Movie Page', () => {
