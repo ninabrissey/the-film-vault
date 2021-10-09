@@ -1,10 +1,10 @@
-beforeEach(() => {
-  cy.fetchMovie('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2');
-  cy.visit('http://localhost:3000/movies/694919');
-});
-
 describe('The Film Vault Movie Page', () => {
   it("should contain all of a movie's details that resolve to truthy", () => {
+    cy.fetchMovie(
+      'GET',
+      'https://rancid-tomatillos.herokuapp.com/api/v1/movies/694919'
+    );
+    cy.visit('http://localhost:3000/movies/694919');
     cy.get('h2')
       .contains('Money Plane')
       .get('h3')
