@@ -7,7 +7,7 @@ main {
   padding-bottom: 10vh;
   /* need to figure out z-index */
   /* position: relative; */
-  z-index: 1;
+  z-index: 3;
 }
 
 footer {
@@ -17,7 +17,7 @@ footer {
   justify-content: center;
   padding: 10vh 0;
   /* need to figure out z-index */
-  z-index: 1;
+  z-index: 4;
 }
 
 .back-to-top {
@@ -25,13 +25,14 @@ footer {
   position: fixed;
   bottom: 0;
   margin-bottom: 5vh;
-  margin-right: 5vw;
+  /* margin-right: 20vw; */
   /* need to figure out z-index */
-  z-index: 2;
+  z-index: 5;
 }
 
 .back-to-top-wrapper {
   text-align: right;
+  margin-right: 10vw;
   /* need to figure out z-index */
   /* position: relative; */
 }
