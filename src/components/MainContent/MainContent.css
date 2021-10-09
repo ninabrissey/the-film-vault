@@ -5,8 +5,10 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 10vh;
+  /* need to figure out z-index */
+  /* position: relative; */
+  z-index: 1;
 }
-
 
 footer {
   width: 97%;
@@ -14,4 +16,22 @@ footer {
   display: flex;
   justify-content: center;
   padding: 10vh 0;
+  /* need to figure out z-index */
+  z-index: 1;
+}
+
+.back-to-top {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5vh;
+  margin-right: 5vw;
+  /* need to figure out z-index */
+  z-index: 2;
+}
+
+.back-to-top-wrapper {
+  text-align: right;
+  /* need to figure out z-index */
+  /* position: relative; */
 }

@@ -39,4 +39,4 @@ deploy:
     api_key:
     secure: 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
     app: the-film-vault
-
+    skip_cleanup: true
