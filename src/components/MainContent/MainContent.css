@@ -23,8 +23,8 @@ footer {
   height: 50px;
   position: fixed;
   bottom: 0;
-  margin-bottom: 100px;
-  margin-right: 100px;
+  margin-bottom: 5vh;
+  margin-right: 5vw;
   /* need to figure out z-index */
   z-index: 2;
 }
