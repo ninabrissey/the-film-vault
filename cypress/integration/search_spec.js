@@ -1,5 +1,5 @@
 beforeEach(() => {
-  cy.visit('http://localhost:3000/');
+  cy.visit('localhost:3000/');
   cy.fetchAllMovies('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2');
 });
 
