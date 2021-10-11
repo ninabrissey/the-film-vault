@@ -25,4 +25,8 @@ describe('The Film Vault Main Page', () => {
   it('should be able to click the logo in the footer', () => {
     cy.get('footer>a').click();
   });
+
+  it('should be able to click on the back to top icon', () => {
+    cy.get('img.back-top-top').click();
+  });
 });
