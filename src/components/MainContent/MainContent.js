@@ -62,21 +62,20 @@ class MainContent extends Component {
           )}
           {!this.state.movies.length && <Loading />}
           <FilmsContainer movies={this.state.filteredMovies} />
-          <div className="back-to-top-wrapper">
-            <Link
-              to="/"
-              onClick={() => {
-                window.location.reload();
-                window.scrollTo(0, 0);
-              }}
-            >
-              <img
-                className="back-to-top"
-                src={backToTopIcon}
-                alt="back to top of page icon"
-              />
-            </Link>
-          </div>
+          <Link
+            className="link-back-to-top"
+            to="/"
+            onClick={() => {
+              window.location.reload();
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img
+              className="back-to-top"
+              src={backToTopIcon}
+              alt="back to top of page icon"
+            />
+          </Link>
         </main>
         <footer>
           <Link
