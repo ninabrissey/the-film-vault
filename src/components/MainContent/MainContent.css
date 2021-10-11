@@ -1,13 +1,10 @@
 main {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 10vh;
-  /* need to figure out z-index */
-  /* position: relative; */
-  z-index: 3;
 }
 
 footer {
@@ -16,23 +13,29 @@ footer {
   display: flex;
   justify-content: center;
   padding: 10vh 0;
-  /* need to figure out z-index */
   z-index: 4;
+}
+
+.link-back-to-top {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  margin-left: 92vw;
+  margin-bottom: 4vh;
 }
 
 .back-to-top {
   height: 50px;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 5vh;
-  /* margin-right: 20vw; */
-  /* need to figure out z-index */
-  z-index: 5;
 }
 
-.back-to-top-wrapper {
-  text-align: right;
-  margin-right: 10vw;
-  /* need to figure out z-index */
-  /* position: relative; */
+@media screen and (max-width: 1200px) {
+  .link-back-to-top {
+    margin-left: 82vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .link-back-to-top {
+    margin-left: 80vw;
+  }
 }
