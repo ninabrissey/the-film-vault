@@ -4,7 +4,7 @@ describe('The Film Vault Movie Page', () => {
       'GET',
       'https://rancid-tomatillos.herokuapp.com/api/v1/movies/694919'
     );
-    cy.visit('localhost:3000/movies/694919');
+    cy.visit('http://localhost:3000/movies/694919');
     cy.get('h2')
       .contains('Money Plane')
       .get('h3')
