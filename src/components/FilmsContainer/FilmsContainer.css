@@ -1,5 +1,5 @@
 .films-container {
-  width: 90vw;
+  width: 85vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
